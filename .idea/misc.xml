@@ -3,7 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/JOKIII/RIAN-ANDROID/IwanMotor/app/src/main/res/layout/activity_splashscreen.xml" value="0.360054347826087" />
+        <entry key="..\:/JOKIII/RIAN-ANDROID/IwanMotor/app/src/main/res/drawable/ic_logo_iwanmotor.xml" value="0.1935" />
+        <entry key="..\:/JOKIII/RIAN-ANDROID/IwanMotor/app/src/main/res/layout/activity_main.xml" value="0.18541666666666667" />
+        <entry key="..\:/JOKIII/RIAN-ANDROID/IwanMotor/app/src/main/res/layout/activity_splashscreen.xml" value="0.25" />
       </map>
     </option>
   </component>
