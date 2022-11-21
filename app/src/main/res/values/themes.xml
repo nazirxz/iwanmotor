@@ -1,15 +1,128 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.IwanMotor" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <style name="Theme.AlzheimerCare" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_500</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorPrimary">@color/blue</item>
+        <item name="colorPrimaryVariant">@color/red</item>
         <item name="colorOnPrimary">@color/white</item>
-        <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/teal_200</item>
-        <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+
+
     </style>
+    <style name="TextView"/>
+    <style name="TextView.PoppinsNormal32sp020202">
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textColor">#202020</item>
+        <item name="android:textSize">32sp</item>
+    </style>
+
+    <style name="ProgressBarColor">
+        <item name="colorAccent">@color/blue</item>
+    </style>
+
+    <style name="DialogTheme">
+        <item name="colorAccent">@color/blue</item>
+    </style>
+
+    <style name="TextView.PoppinsNormal16sp020202">
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textColor">#202020</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="TextView.PoppinsNormal22sp020202">
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textColor">#202020</item>
+        <item name="android:textSize">22sp</item>
+    </style>
+
+    <style name="TextView.PoppinsNormal20sp020202">
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textColor">#202020</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="TextView.PoppinsNormal18sp020202">
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textColor">#202020</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="TextView.PoppinsNormal14sp202020">
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textColor">#202020</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="TextView.PoppinsNormal14sp8D92A3">
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textColor">#8D92A3</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="TextView.PoppinsNormal13sp8D92A3">
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textColor">#8D92A3</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <style name="TextView.PoppinsNormal10sp8D92A3">
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textColor">#8D92A3</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <style name="TextView.PoppinsNormal10spD9435E">
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textColor">#D9435E</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <style name="TextView.PoppinsNormal14sp020202">
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textColor">#020202</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="inputText" parent="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="android:textColorHint">@color/gray</item>
+        <item name="boxStrokeColor">@color/gray</item>
+    </style>
+
+    <style name="Button"/>
+
+    <style name="Button.Primary">
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:background">@drawable/shape_rectangle_8_ffc700</item>
+    </style>
+
+    <style name="Button.PrimaryVariant">
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:background">@drawable/shape_rectangle_9_ffc700</item>
+    </style>
+
+
+    <style name="EditText"/>
+
+    <style name="EditText.PoppinsNormal14sp8D92A3">
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textColor">#8D92A3</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="SpinnerDatePickerDialogTheme" parent="Theme.AppCompat.Light.Dialog">
+        <!-- android:datePickerStyle was not added until API 21 -->
+        <item name="android:datePickerStyle">@style/DatePickerStyle</item>
+    </style>
+
+    <style name="DatePickerStyle" parent="@android:style/Widget.Material.Light.DatePicker">
+        <item name="android:datePickerMode">spinner</item>
+    </style>
+
 </resources>
