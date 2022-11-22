@@ -1,4 +1,4 @@
-package com.nazirman.iwanmotor
+package com.projek.iwanmotor
 
 import org.junit.Test
 

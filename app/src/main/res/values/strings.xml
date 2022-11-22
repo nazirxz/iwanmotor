@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Iwan Motor</string>
+
+    <string name="HeaderDaftar">Masuk Akun</string>
+    <string name="boxEmail">Alamat Email</string>
+    <string name="boxPassword">Password</string>
+    <string name="submitDaftar">Masuk</string>
+    <string name="belumDaftar">Belum mempunyai akun ?</string>
+    <string name="linkDaftar">Daftar di sini</string>
 </resources>
