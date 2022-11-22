@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     android:padding="48dp">
 
-
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="413dp"
@@ -25,7 +24,7 @@
         android:layout_width="315dp"
         android:layout_height="39dp"
         android:layout_marginTop="32dp"
-        android:text="@string/submitMasuk"
+        android:text="@string/submitDaftar"
         android:textAllCaps="false"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="@+id/txtPassword"
@@ -50,7 +49,7 @@
         style="@style/inputText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="23dp"
         android:hint="@string/boxPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -66,15 +65,37 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtNamaLengkap"
+        style="@style/inputText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:hint="@string/boxNama"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtSignin">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etNama"
+            style="@style/TextView.DmsansNormal14sp8D92A3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            tools:layout_editor_absoluteX="48dp"
+            tools:layout_editor_absoluteY="285dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/txtEmail"
         style="@style/inputText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="23dp"
         android:hint="@string/boxEmail"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txtSignin">
+        app:layout_constraintTop_toBottomOf="@id/txtNamaLengkap">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etEmail"
@@ -93,7 +114,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="172dp"
-        android:text="@string/HeaderMasuk"
+        android:text="@string/HeaderDaftar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
