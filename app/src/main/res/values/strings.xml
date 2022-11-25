@@ -13,5 +13,35 @@
     <string name="submitDaftar">Daftar</string>
     <string name="sudahDaftar">Sudah mempunyai akun ?</string>
     <string name="linkMasuk">Masuk di sini</string>
-    
+
+<!--    Dashboard -->
+    <string name="home_greeting">Hello, %s</string>
+    <string name="datetime">Monday,17 May 2022</string>
+    <string name="Dashboard"><u>Dashboard</u></string>
+
+    <string name="angkatotal_penjualan">2</string>
+    <string name="total_penjualan">Total Penjualan</string>
+    <string name="ic_totalPenjualan">Icon Total Penjualan</string>
+
+    <string name="angkatotal_stok">20</string>
+    <string name="total_stok">Total Stok Barang</string>
+    <string name="ic_totalStok">Icon Total Stok Barang</string>
+
+    <string name="angkatotal_kaskeluar">20</string>
+    <string name="kaskeluar">Total Kas Keluar</string>
+    <string name="ic_totalkaskeluar">Icon Total Kas Keluar</string>
+
+    <string name="angkatotal_kasmasuk">246.604</string>
+    <string name="kasmasuk">Total Kas Masuk</string>
+    <string name="ic_totalkasmasuk">Icon Total Kas Masuk</string>
+
+    <string name="angkatotal_kas">246.604</string>
+    <string name="kas">Total Kas</string>
+    <string name="ic_totalkas">Icon Total Kas</string>
+
+<!--    Navbar -->
+    <string name="title_home">Home</string>
+    <string name="title_kas">Kas</string>
+    <string name="title_barang">Barang</string>
+
 </resources>
