@@ -1,20 +1,20 @@
 <resources>
-    <string name="app_name">Iwan Motor</string> 
-<!--  Login -->
+    <string name="app_name">Iwan Motor</string>
+    <!--  Login -->
     <string name="HeaderMasuk">Masuk Akun</string>
     <string name="boxEmail">Alamat Email</string>
     <string name="boxPassword">Password</string>
     <string name="submitMasuk">Masuk</string>
     <string name="belumDaftar">Belum mempunyai akun ?</string>
     <string name="linkDaftar">Daftar di sini</string>
-<!--  Register -->
+    <!--  Register -->
     <string name="HeaderDaftar">Daftar Akun</string>
     <string name="boxNama">Nama Lengkap</string>
     <string name="submitDaftar">Daftar</string>
     <string name="sudahDaftar">Sudah mempunyai akun ?</string>
     <string name="linkMasuk">Masuk di sini</string>
 
-<!--    Dashboard -->
+    <!--    Dashboard -->
     <string name="home_greeting">Hello, %s</string>
     <string name="datetime">Monday,17 May 2022</string>
     <string name="Dashboard"><u>Dashboard</u></string>
@@ -39,9 +39,23 @@
     <string name="kas">Total Kas</string>
     <string name="ic_totalkas">Icon Total Kas</string>
 
-<!--    Navbar -->
+    <!--    Navbar -->
     <string name="title_home">Home</string>
-    <string name="title_kas">Kas</string>
+    <string name="title_kas">Transaksi</string>
     <string name="title_barang">Barang</string>
+
+    <!--    Activity barang -->
+    <string name="title_activitybarang"><u>Data Barang</u></string>
+    <string name="namaproduk">Nama Produk</string>
+    <string name="hargamodal">Harga Modal</string>
+    <string name="hargajual">Harga Jual</string>
+    <string name="stok">Stok</string>
+    <string name="tglmasuk">Tanggal Masuk</string>
+    <string name="tambahbarangbaru">Tambah barang baru</string>
+    <string name="title_tambah_barang"><u>Tambah Barang</u></string>
+    <string name="title_edit_barang"><u>Detail Barang</u></string>
+    <string name="tambahdata">Tambah</string>
+    <string name="hapusdata">Hapus</string>
+
 
 </resources>

@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_kas"
+        android:icon="@drawable/ic_transaksi"
+        android:title="@string/title_kas" />
     <item
         android:id="@+id/navigation_home"
         android:icon="@drawable/ic_home"
         android:title="@string/title_home" />
-
-    <item
-        android:id="@+id/navigation_kas"
-        android:icon="@drawable/ic_money"
-        android:title="@string/title_kas" />
-
     <item
         android:id="@+id/navigation_produk"
-        android:icon="@drawable/ic_produk"
+        android:icon="@drawable/ic_barang"
         android:title="@string/title_barang" />
 </menu>
