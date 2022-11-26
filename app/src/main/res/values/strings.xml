@@ -59,13 +59,12 @@
 
 
 <!-- Activity Barang -->
-    <string name="title_transaksi"><u>Data Transaksi</u></string>
+    <string name="title_transaksi"> <u>Data Transaksi</u> </string>
     <string name="tambahtransaksibaru">Tambah Transaksi Baru</string>
-<string name="invoice">Invoice</string>
+    <string name="invoice">Invoice</string>
     <string name="jumlah">Jumlah</string>
     <string name="subtotal">Subtotal</string>
     <string name="tglpembelian">Tanggal Pembelian</string>
-
     <string name="title_tambahtransaksi">Tambah Transaksi</string>
     <string name="harga">Harga</string>
     <string name="simpan">Simpan</string>

@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/JOKIII/RIAN-ANDROID/IwanMotor/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1" />
         <entry key="..\:/JOKIII/RIAN-ANDROID/IwanMotor/app/src/main/res/drawable-v24/shape_rectangle_8_ffc700.xml" value="0.1935" />
         <entry key="..\:/JOKIII/RIAN-ANDROID/IwanMotor/app/src/main/res/drawable-v24/shape_rectangle_9_ffc700.xml" value="0.1935" />
         <entry key="..\:/JOKIII/RIAN-ANDROID/IwanMotor/app/src/main/res/drawable/bottom_nav_icon_color_selector.xml" value="0.101" />
@@ -21,7 +22,7 @@
         <entry key="..\:/JOKIII/RIAN-ANDROID/IwanMotor/app/src/main/res/layout/activity_kas.xml" value="0.13247863247863248" />
         <entry key="..\:/JOKIII/RIAN-ANDROID/IwanMotor/app/src/main/res/layout/activity_login.xml" value="0.22" />
         <entry key="..\:/JOKIII/RIAN-ANDROID/IwanMotor/app/src/main/res/layout/activity_main.xml" value="0.18541666666666667" />
-        <entry key="..\:/JOKIII/RIAN-ANDROID/IwanMotor/app/src/main/res/layout/activity_register.xml" value="0.25" />
+        <entry key="..\:/JOKIII/RIAN-ANDROID/IwanMotor/app/src/main/res/layout/activity_register.xml" value="0.1" />
         <entry key="..\:/JOKIII/RIAN-ANDROID/IwanMotor/app/src/main/res/layout/activity_splashscreen.xml" value="0.25" />
         <entry key="..\:/JOKIII/RIAN-ANDROID/IwanMotor/app/src/main/res/layout/activity_transaksi.xml" value="0.16" />
         <entry key="..\:/JOKIII/RIAN-ANDROID/IwanMotor/app/src/main/res/layout/fragment_barang.xml" value="0.33" />

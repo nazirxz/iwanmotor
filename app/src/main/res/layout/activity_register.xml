@@ -20,7 +20,7 @@
         app:srcCompat="@drawable/logo" />
 
     <Button
-        android:id="@+id/btnSignin"
+        android:id="@+id/btnRegister"
         style="@style/Button.Primary"
         android:layout_width="315dp"
         android:layout_height="39dp"
@@ -120,8 +120,8 @@
         android:layout_marginTop="12dp"
         android:fontFamily="@font/dmsans"
         android:text="@string/sudahDaftar"
-        app:layout_constraintStart_toStartOf="@+id/btnSignin"
-        app:layout_constraintTop_toBottomOf="@+id/btnSignin" />
+        app:layout_constraintStart_toStartOf="@+id/btnRegister"
+        app:layout_constraintTop_toBottomOf="@+id/btnRegister" />
 
     <TextView
         android:id="@+id/tvClick"
@@ -132,9 +132,9 @@
         android:fontFamily="@font/dmsans"
         android:text="@string/linkMasuk"
         android:textColor="@color/blue"
-        app:layout_constraintEnd_toEndOf="@+id/btnSignin"
+        app:layout_constraintEnd_toEndOf="@+id/btnRegister"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/signin"
-        app:layout_constraintTop_toBottomOf="@+id/btnSignin" />
+        app:layout_constraintTop_toBottomOf="@+id/btnRegister" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

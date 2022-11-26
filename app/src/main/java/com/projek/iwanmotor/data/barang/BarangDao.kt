@@ -8,6 +8,8 @@ import androidx.room.Query
 import androidx.room.Update
 import kotlinx.coroutines.flow.Flow
 
+
+@Dao
 interface BarangDao {
 
     @Query("SELECT * from barang ORDER BY namaProduk ASC")
