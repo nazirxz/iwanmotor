@@ -2,127 +2,127 @@
     <!-- Base application theme. -->
     <style name="Theme.IwanMotor" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/blue_green</item>
-        <item name="colorPrimaryVariant">@color/blue</item>
-        <item name="colorOnPrimary">@color/white</item>
+        <user name="colorPrimary">@color/blue_green</user>
+        <user name="colorPrimaryVariant">@color/blue</user>
+        <user name="colorOnPrimary">@color/white</user>
         <!-- Status bar color. -->
-        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <user name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</user>
         <!-- Customize your theme here. -->
 
 
     </style>
     <style name="TextView"/>
     <style name="TextView.DmsansNormal32sp020202">
-        <item name="android:fontFamily">@font/dmsans</item>
-        <item name="android:textColor">#202020</item>
-        <item name="android:textSize">32sp</item>
+        <user name="android:fontFamily">@font/dmsans</user>
+        <user name="android:textColor">#202020</user>
+        <user name="android:textSize">32sp</user>
     </style>
 
     <style name="ProgressBarColor">
-        <item name="colorAccent">@color/blue</item>
+        <user name="colorAccent">@color/blue</user>
     </style>
 
     <style name="DialogTheme">
-        <item name="colorAccent">@color/blue</item>
+        <user name="colorAccent">@color/blue</user>
     </style>
 
     <style name="TextView.DmsansNormal16sp020202">
-        <item name="android:fontFamily">@font/dmsans</item>
-        <item name="android:textColor">#202020</item>
-        <item name="android:textSize">16sp</item>
+        <user name="android:fontFamily">@font/dmsans</user>
+        <user name="android:textColor">#202020</user>
+        <user name="android:textSize">16sp</user>
     </style>
 
     <style name="TextView.DmsansNormal22sp020202">
-        <item name="android:fontFamily">@font/dmsans</item>
-        <item name="android:textColor">#202020</item>
-        <item name="android:textSize">22sp</item>
+        <user name="android:fontFamily">@font/dmsans</user>
+        <user name="android:textColor">#202020</user>
+        <user name="android:textSize">22sp</user>
     </style>
 
     <style name="TextView.DmsansNormal20sp020202">
-        <item name="android:fontFamily">@font/dmsans</item>
-        <item name="android:textColor">#202020</item>
-        <item name="android:textSize">20sp</item>
+        <user name="android:fontFamily">@font/dmsans</user>
+        <user name="android:textColor">#202020</user>
+        <user name="android:textSize">20sp</user>
     </style>
 
     <style name="TextView.DmsansNormal18sp020202">
-        <item name="android:fontFamily">@font/dmsans</item>
-        <item name="android:textColor">#202020</item>
-        <item name="android:textSize">18sp</item>
+        <user name="android:fontFamily">@font/dmsans</user>
+        <user name="android:textColor">#202020</user>
+        <user name="android:textSize">18sp</user>
     </style>
 
     <style name="TextView.DmsansNormal14sp202020">
-        <item name="android:fontFamily">@font/dmsans</item>
-        <item name="android:textColor">#202020</item>
-        <item name="android:textSize">14sp</item>
+        <user name="android:fontFamily">@font/dmsans</user>
+        <user name="android:textColor">#202020</user>
+        <user name="android:textSize">14sp</user>
     </style>
 
     <style name="TextView.DmsansNormal14sp8D92A3">
-        <item name="android:fontFamily">@font/dmsans</item>
-        <item name="android:textColor">#8D92A3</item>
-        <item name="android:textSize">14sp</item>
+        <user name="android:fontFamily">@font/dmsans</user>
+        <user name="android:textColor">#8D92A3</user>
+        <user name="android:textSize">14sp</user>
     </style>
 
     <style name="TextView.DmsansNormal13sp8D92A3">
-        <item name="android:fontFamily">@font/dmsans</item>
-        <item name="android:textColor">#8D92A3</item>
-        <item name="android:textSize">13sp</item>
+        <user name="android:fontFamily">@font/dmsans</user>
+        <user name="android:textColor">#8D92A3</user>
+        <user name="android:textSize">13sp</user>
     </style>
 
     <style name="TextView.DmsansNormal10sp8D92A3">
-        <item name="android:fontFamily">@font/dmsans</item>
-        <item name="android:textColor">#8D92A3</item>
-        <item name="android:textSize">10sp</item>
+        <user name="android:fontFamily">@font/dmsans</user>
+        <user name="android:textColor">#8D92A3</user>
+        <user name="android:textSize">10sp</user>
     </style>
 
     <style name="TextView.DmsansNormal10spD9435E">
-        <item name="android:fontFamily">@font/dmsans</item>
-        <item name="android:textColor">#D9435E</item>
-        <item name="android:textSize">10sp</item>
+        <user name="android:fontFamily">@font/dmsans</user>
+        <user name="android:textColor">#D9435E</user>
+        <user name="android:textSize">10sp</user>
     </style>
 
     <style name="TextView.DmsansNormal14sp020202">
-        <item name="android:fontFamily">@font/dmsans</item>
-        <item name="android:textColor">#020202</item>
-        <item name="android:textSize">14sp</item>
+        <user name="android:fontFamily">@font/dmsans</user>
+        <user name="android:textColor">#020202</user>
+        <user name="android:textSize">14sp</user>
     </style>
 
     <style name="inputText" parent="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-        <item name="android:textColorHint">@color/gray</item>
-        <item name="boxStrokeColor">@color/gray</item>
+        <user name="android:textColorHint">@color/gray</user>
+        <user name="boxStrokeColor">@color/gray</user>
     </style>
 
     <style name="Button"/>
 
     <style name="Button.Primary">
-        <item name="android:fontFamily">@font/dmsans</item>
-        <item name="android:textColor">@color/white</item>
-        <item name="android:textSize">14sp</item>
-        <item name="android:background">@drawable/shape_rectangle_8_ffc700</item>
+        <user name="android:fontFamily">@font/dmsans</user>
+        <user name="android:textColor">@color/white</user>
+        <user name="android:textSize">14sp</user>
+        <user name="android:background">@drawable/shape_rectangle_8_ffc700</user>
     </style>
 
     <style name="Button.PrimaryVariant">
-        <item name="android:fontFamily">@font/dmsans</item>
-        <item name="android:textColor">@color/white</item>
-        <item name="android:textSize">14sp</item>
-        <item name="android:background">@drawable/shape_rectangle_9_ffc700</item>
+        <user name="android:fontFamily">@font/dmsans</user>
+        <user name="android:textColor">@color/white</user>
+        <user name="android:textSize">14sp</user>
+        <user name="android:background">@drawable/shape_rectangle_9_ffc700</user>
     </style>
 
 
     <style name="EditText"/>
 
     <style name="EditText.DmsansNormal14sp8D92A3">
-        <item name="android:fontFamily">@font/dmsans</item>
-        <item name="android:textColor">#8D92A3</item>
-        <item name="android:textSize">14sp</item>
+        <user name="android:fontFamily">@font/dmsans</user>
+        <user name="android:textColor">#8D92A3</user>
+        <user name="android:textSize">14sp</user>
     </style>
 
     <style name="SpinnerDatePickerDialogTheme" parent="Theme.AppCompat.Light.Dialog">
         <!-- android:datePickerStyle was not added until API 21 -->
-        <item name="android:datePickerStyle">@style/DatePickerStyle</item>
+        <user name="android:datePickerStyle">@style/DatePickerStyle</user>
     </style>
 
     <style name="DatePickerStyle" parent="@android:style/Widget.Material.Light.DatePicker">
-        <item name="android:datePickerMode">spinner</item>
+        <user name="android:datePickerMode">spinner</user>
     </style>
 
 </resources>

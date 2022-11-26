@@ -58,7 +58,7 @@
     <string name="hapusdata">Hapus</string>
 
 
-<!-- Activity Transaksi -->
+<!-- Activity Barang -->
     <string name="title_transaksi"><u>Data Transaksi</u></string>
     <string name="tambahtransaksibaru">Tambah Transaksi Baru</string>
 <string name="invoice">Invoice</string>
