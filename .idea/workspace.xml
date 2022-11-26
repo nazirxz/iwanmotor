@@ -13,17 +13,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fb5c3a67-a689-432a-9c14-de613206bd96" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/projek/iwanmotor/data/LocalDataSource.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/projek/iwanmotor/ui/daftar/DaftarActivity.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/projek/iwanmotor/ui/login/LoginViewModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/projek/iwanmotor/data/DatabaseApplication.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/projek/iwanmotor/data/IwanMotorDatabase.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/projek/iwanmotor/data/transaksi/TransaksiDao.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/projek/iwanmotor/data/transaksi/TransaksiDao.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/projek/iwanmotor/ui/DaftarActivity.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/projek/iwanmotor/ui/LoginActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/projek/iwanmotor/ui/login/LoginActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/projek/iwanmotor/ui/splash/SplashScreenActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/projek/iwanmotor/ui/splash/SplashScreenActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/generated/source/kapt/debug/com/projek/iwanmotor/IwanMotorDatabase_Impl.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/source/kapt/debug/com/projek/iwanmotor/IwanMotorDatabase_Impl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/projek/iwanmotor/data/RoomDatabase.kt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_register.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_register.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -262,7 +257,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669456371539</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="backend - adding repository database">
+      <created>1669458949773</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1669458949773</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -290,6 +292,7 @@
     <MESSAGE value="backend - login and register href" />
     <MESSAGE value="backend - database (dao &amp; entity)" />
     <MESSAGE value="backend - change user dao for login" />
-    <option name="LAST_COMMIT_MESSAGE" value="backend - change user dao for login" />
+    <MESSAGE value="backend - adding repository database" />
+    <option name="LAST_COMMIT_MESSAGE" value="backend - adding repository database" />
   </component>
 </project>

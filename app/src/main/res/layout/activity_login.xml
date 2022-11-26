@@ -20,42 +20,6 @@
         app:layout_constraintVertical_bias="0.288"
         app:srcCompat="@drawable/logo" />
 
-    <Button
-        android:id="@+id/btnSignin"
-        style="@style/Button.Primary"
-        android:layout_width="315dp"
-        android:layout_height="39dp"
-        android:layout_marginTop="28dp"
-        android:text="@string/submitMasuk"
-        android:textAllCaps="false"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtPassword"
-        app:layout_constraintVertical_bias="0.0" />
-
-
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/txtPassword"
-        style="@style/inputText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:hint="@string/boxPassword"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txtEmail">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etPassword"
-            style="@style/TextView.DmsansNormal14sp8D92A3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textPassword"
-            android:maxLines="1" />
-    </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/txtEmail"
@@ -79,6 +43,26 @@
             tools:layout_editor_absoluteY="285dp" />
     </com.google.android.material.textfield.TextInputLayout>
 
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtPassword"
+        style="@style/inputText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:hint="@string/boxPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtEmail">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etPassword"
+            style="@style/TextView.DmsansNormal14sp8D92A3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:maxLines="1" />
+    </com.google.android.material.textfield.TextInputLayout>
     <TextView
         android:id="@+id/txtSignin"
         style="@style/TextView.DmsansNormal32sp020202"
@@ -90,7 +74,20 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
+    <Button
+        android:id="@+id/btnSignin"
+        style="@style/Button.Primary"
+        android:layout_width="315dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="28dp"
+        android:text="@string/submitMasuk"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtPassword"
+        app:layout_constraintVertical_bias="0.0" />
     <TextView
         android:id="@+id/signin"
         android:layout_width="wrap_content"
