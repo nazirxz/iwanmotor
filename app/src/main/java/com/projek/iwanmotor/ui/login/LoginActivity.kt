@@ -1,9 +1,10 @@
-package com.projek.iwanmotor.ui
+package com.projek.iwanmotor.ui.login
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.projek.iwanmotor.databinding.ActivityLoginBinding
+import com.projek.iwanmotor.ui.daftar.DaftarActivity
 
 class LoginActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLoginBinding

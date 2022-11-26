@@ -13,8 +13,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fb5c3a67-a689-432a-9c14-de613206bd96" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/projek/iwanmotor/data/LocalDataSource.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/projek/iwanmotor/ui/daftar/DaftarActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/projek/iwanmotor/ui/login/LoginViewModel.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/projek/iwanmotor/data/user/UserDao.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/projek/iwanmotor/data/user/UserDao.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/projek/iwanmotor/data/transaksi/TransaksiDao.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/projek/iwanmotor/data/transaksi/TransaksiDao.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/projek/iwanmotor/ui/DaftarActivity.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/projek/iwanmotor/ui/LoginActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/projek/iwanmotor/ui/login/LoginActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/projek/iwanmotor/ui/splash/SplashScreenActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/projek/iwanmotor/ui/splash/SplashScreenActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_register.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_register.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,9 +43,10 @@
         <option value="valueResourceFile" />
         <option value="navigationResourceFile" />
         <option value="resourceFile" />
-        <option value="Kotlin Class" />
         <option value="Kotlin Data Class" />
         <option value="Kotlin Interface" />
+        <option value="Kotlin File" />
+        <option value="Kotlin Class" />
       </list>
     </option>
   </component>
@@ -87,6 +97,8 @@
       <recent name="F:\JOKIII\RIAN-ANDROID\IwanMotor\app\src\main\res\drawable" />
     </key>
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="com.projek.iwanmotor.ui.daftar" />
+      <recent name="com.projek.iwanmotor.ui.login" />
       <recent name="com.projek.iwanmotor.data" />
       <recent name="com.projek.iwanmotor" />
       <recent name="com.projek.iwanmotor.ui" />
@@ -243,7 +255,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669455112260</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="backend - change user dao for login">
+      <created>1669456371539</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1669456371539</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -270,6 +289,7 @@
     <MESSAGE value="frontend - bagian transaksi (tambah/detail/table)" />
     <MESSAGE value="backend - login and register href" />
     <MESSAGE value="backend - database (dao &amp; entity)" />
-    <option name="LAST_COMMIT_MESSAGE" value="backend - database (dao &amp; entity)" />
+    <MESSAGE value="backend - change user dao for login" />
+    <option name="LAST_COMMIT_MESSAGE" value="backend - change user dao for login" />
   </component>
 </project>

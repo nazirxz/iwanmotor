@@ -6,7 +6,7 @@ import android.os.Handler
 import android.os.Looper
 import androidx.appcompat.app.AppCompatActivity
 import com.projek.iwanmotor.R
-import com.projek.iwanmotor.ui.LoginActivity
+import com.projek.iwanmotor.ui.login.LoginActivity
 
 class SplashScreenActivity : AppCompatActivity() {
 

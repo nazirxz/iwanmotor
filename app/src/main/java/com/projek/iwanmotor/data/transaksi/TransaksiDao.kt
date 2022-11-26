@@ -11,10 +11,10 @@ import kotlinx.coroutines.flow.Flow
 interface TransaksiDao {
 
     @Query("SELECT * from transaksi ORDER BY namaProduk ASC")
-    fun getTransaksi(): Flow<List<Transaksi>>
+    fun getTransaksis(): Flow<List<Transaksi>>
 
     @Query("SELECT * from transaksi WHERE invoice = :invoice")
-    fun getTransaksi(invoice: Int): Flow<Transaksi>
+    fun getTransaksi(invoice: String): Flow<Transaksi>
 
     // Specify the conflict strategy as IGNORE, when the Barang tries to add an
     // existing Barang into the database Room ignores the conflict.
