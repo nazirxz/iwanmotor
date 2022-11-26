@@ -22,6 +22,9 @@ interface UserDao {
     @Query("SELECT * from user WHERE id = :id")
     fun getUser(id: Int): Flow<User>
 
+    @Query("SELECT * from user where alamatEmail=:email AND password=:password")
+    fun getUser(email:String, password: String): Flow<User>
+
     // Specify the conflict strategy as IGNORE, when the user tries to add an
     // existing User into the database Room ignores the conflict.
     @Insert(onConflict = OnConflictStrategy.IGNORE)
