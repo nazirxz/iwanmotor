@@ -11,10 +11,9 @@ import androidx.lifecycle.ViewModelProvider
 import com.projek.iwanmotor.data.IwanMotorDatabase
 import com.projek.iwanmotor.data.user.User
 import com.projek.iwanmotor.databinding.ActivityRegisterBinding
-import com.projek.iwanmotor.ui.dashboard.DashboardActivity
+import com.projek.iwanmotor.ui.HomeActivity
 import com.projek.iwanmotor.ui.login.LoginActivity
 import com.projek.iwanmotor.ui.login.LoginViewModel
-import java.util.regex.Pattern
 
 
 class DaftarActivity : AppCompatActivity() {
@@ -24,7 +23,7 @@ class DaftarActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityRegisterBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
+        supportActionBar?.hide()
         val userDetailsRepository = ViewModelProvider(this@DaftarActivity).get(LoginViewModel::class.java)
 
         binding.tvClick.setOnClickListener{
@@ -61,7 +60,7 @@ class DaftarActivity : AppCompatActivity() {
                             user.password = binding.etPassword.text.toString()
                             val userDatabase = IwanMotorDatabase
                             userDatabase.getDatabase(this@DaftarActivity)?.userDao()?.insertUserData(user)
-                            startActivity(Intent(this@DaftarActivity, DashboardActivity::class.java))
+                            startActivity(Intent(this@DaftarActivity, HomeActivity::class.java))
                         }
                     }
                 })

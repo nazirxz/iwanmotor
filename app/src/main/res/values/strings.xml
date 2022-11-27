@@ -58,7 +58,7 @@
     <string name="hapusdata">Hapus</string>
 
 
-<!-- Activity Barang -->
+    <!-- Activity Barang -->
     <string name="title_transaksi"> <u>Data Transaksi</u> </string>
     <string name="tambahtransaksibaru">Tambah Transaksi Baru</string>
     <string name="invoice">Invoice</string>
@@ -68,5 +68,7 @@
     <string name="title_tambahtransaksi">Tambah Transaksi</string>
     <string name="harga">Harga</string>
     <string name="simpan">Simpan</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

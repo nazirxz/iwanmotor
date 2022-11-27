@@ -23,3 +23,7 @@ data class Barang(
     @ColumnInfo(name = "tglMasuk")
     val tglMasuk: String,
 )
+fun Barang.getFormattedPrice(): String =
+    java.text.NumberFormat.getCurrencyInstance().format(hargaModal)
+fun Barang.getFormattedPrice2(): String =
+    java.text.NumberFormat.getCurrencyInstance().format(hargaJual)

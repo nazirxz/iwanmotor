@@ -9,7 +9,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.projek.iwanmotor.data.user.User
 import com.projek.iwanmotor.databinding.ActivityLoginBinding
 import com.projek.iwanmotor.ui.daftar.DaftarActivity
-import com.projek.iwanmotor.ui.dashboard.DashboardActivity
+import com.projek.iwanmotor.ui.HomeActivity
 
 class LoginActivity : AppCompatActivity() {
     var isExist = false
@@ -17,16 +17,13 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLoginBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
+        supportActionBar?.hide()
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
         val userDetailsRepository = ViewModelProvider(this).get(LoginViewModel::class.java)
-
-
         binding.tvClick.setOnClickListener{
             startActivity(Intent(this, DaftarActivity::class.java))
         }
-
         binding.btnSignin.setOnClickListener{
             if (validation()) {
                 userDetailsRepository.getGetAllData().observe(this, object : Observer<List<User>> {
@@ -35,7 +32,7 @@ class LoginActivity : AppCompatActivity() {
                         for (i in userObject.indices) {
                             if (userObject[i].email?.equals(binding.etEmail.text.toString())!!) {
                                 if (userObject[i].password?.equals(binding.etPassword.text.toString())!!) {
-                                    val intent = Intent(this@LoginActivity, DashboardActivity::class.java)
+                                    val intent = Intent(this@LoginActivity, HomeActivity::class.java)
                                         .putExtra("UserDetials", userObject[i])
                                     // start your next activity
                                     startActivity(intent)

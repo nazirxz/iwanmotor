@@ -21,13 +21,10 @@ abstract class IwanMotorDatabase : RoomDatabase() {
 
         private var INSTANCE: IwanMotorDatabase? = null
         fun getDatabase(context: Context): IwanMotorDatabase? {
-
             if (INSTANCE == null) synchronized(IwanMotorDatabase::class.java) {
-
                 if (INSTANCE == null) {
-
                     INSTANCE = Room.databaseBuilder(
-                        context, IwanMotorDatabase::class.java, "USER_DATABASE"
+                        context, IwanMotorDatabase::class.java, "IwanMotorDatabase"
                     ).allowMainThreadQueries()
                         .fallbackToDestructiveMigration()
                         .build()

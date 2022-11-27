@@ -19,5 +19,4 @@ class User : Serializable {
 
     var password: String? = null
 
-
 }

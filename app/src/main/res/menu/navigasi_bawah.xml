@@ -2,15 +2,15 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/navigation_kas"
+        android:id="@+id/navigation_transaksi"
         android:icon="@drawable/ic_transaksi"
         android:title="@string/title_kas" />
     <item
-        android:id="@+id/navigation_home"
+        android:id="@+id/navigation_dashboard"
         android:icon="@drawable/ic_home"
         android:title="@string/title_home" />
     <item
-        android:id="@+id/navigation_produk"
+        android:id="@+id/navigation_barang"
         android:icon="@drawable/ic_barang"
         android:title="@string/title_barang" />
 </menu>
