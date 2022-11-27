@@ -2,6 +2,8 @@ package com.projek.iwanmotor.ui.daftar
 
 import android.content.Intent
 import android.os.Bundle
+import android.text.TextUtils
+import android.util.Patterns
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
@@ -9,8 +11,11 @@ import androidx.lifecycle.ViewModelProvider
 import com.projek.iwanmotor.data.IwanMotorDatabase
 import com.projek.iwanmotor.data.user.User
 import com.projek.iwanmotor.databinding.ActivityRegisterBinding
+import com.projek.iwanmotor.ui.dashboard.DashboardActivity
 import com.projek.iwanmotor.ui.login.LoginActivity
 import com.projek.iwanmotor.ui.login.LoginViewModel
+import java.util.regex.Pattern
+
 
 class DaftarActivity : AppCompatActivity() {
     var isExist = false
@@ -29,11 +34,13 @@ class DaftarActivity : AppCompatActivity() {
             if (validation()) {
                 userDetailsRepository.getGetAllData().observe(this, object : Observer<List<User>> {
                     override fun onChanged(t: List<User>) {
+                        var email : String = ""
                         var userObject = t
                         for (i in userObject.indices) {
                             if (userObject[i].email?.equals(binding.etEmail.text.toString())!!) {
                                 isExist = true
-                                Toast.makeText(this@DaftarActivity," User Already Registered ", Toast.LENGTH_LONG).show()
+                                Toast.makeText(this@DaftarActivity, "User sudah ada", Toast.LENGTH_LONG)
+                                    .show()
                                 break
 
                             } else {
@@ -43,8 +50,10 @@ class DaftarActivity : AppCompatActivity() {
                             }
                         }
                         if (isExist) {
-                            Toast.makeText(this@DaftarActivity, " User Already Registered !!! ", Toast.LENGTH_LONG)
-                                .show()
+                                Toast.makeText(this@DaftarActivity, "Daftar berhasil", Toast.LENGTH_LONG)
+                                    .show()
+
+
                         } else {
                             val user = User()
                             user.namaLengkap = binding.etNama.text.toString()
@@ -52,13 +61,15 @@ class DaftarActivity : AppCompatActivity() {
                             user.password = binding.etPassword.text.toString()
                             val userDatabase = IwanMotorDatabase
                             userDatabase.getDatabase(this@DaftarActivity)?.userDao()?.insertUserData(user)
-                            Toast.makeText(this@DaftarActivity, " User Registered Successfully", Toast.LENGTH_LONG)
-                                .show()
+                            startActivity(Intent(this@DaftarActivity, DashboardActivity::class.java))
                         }
                     }
                 })
             }
         }
+    }
+    private fun isValidEmail(email: String): Boolean {
+        return !TextUtils.isEmpty(email) && Patterns.EMAIL_ADDRESS.matcher(email).matches()
     }
 
     private fun validation(): Boolean {
@@ -79,7 +90,11 @@ class DaftarActivity : AppCompatActivity() {
             Toast.makeText(this@DaftarActivity, " Masukkan Password lebih dari 6 karakter ", Toast.LENGTH_LONG).show()
             return false
         }
-        return true
+        if (!isValidEmail(binding.etEmail.text.toString())) {
+            Toast.makeText(this@DaftarActivity, " Format alamat email salah ", Toast.LENGTH_LONG).show()
+            return false
+        }
+      return true
     }
 
 }
