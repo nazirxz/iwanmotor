@@ -24,46 +24,46 @@ class DaftarActivity : AppCompatActivity() {
         binding = ActivityRegisterBinding.inflate(layoutInflater)
         setContentView(binding.root)
         supportActionBar?.hide()
-        val userDetailsRepository = ViewModelProvider(this@DaftarActivity).get(LoginViewModel::class.java)
+        val userDetailsRepository = ViewModelProvider(this@DaftarActivity)[LoginViewModel::class.java]
 
         binding.tvClick.setOnClickListener{
             startActivity(Intent(this, LoginActivity::class.java))
         }
         binding.btnRegister.setOnClickListener {
             if (validation()) {
-                userDetailsRepository.getGetAllData().observe(this, object : Observer<List<User>> {
-                    override fun onChanged(t: List<User>) {
-                        var email : String = ""
-                        var userObject = t
-                        for (i in userObject.indices) {
-                            if (userObject[i].email?.equals(binding.etEmail.text.toString())!!) {
-                                isExist = true
-                                Toast.makeText(this@DaftarActivity, "User sudah ada", Toast.LENGTH_LONG)
-                                    .show()
-                                break
-
-                            } else {
-                                isExist = false
-                                continue
-
-                            }
-                        }
-                        if (isExist) {
-                                Toast.makeText(this@DaftarActivity, "Daftar berhasil", Toast.LENGTH_LONG)
-                                    .show()
-
+                userDetailsRepository.getGetAllData().observe(this
+                ) { t ->
+                    var email: String = ""
+                    var userObject = t
+                    for (i in userObject.indices) {
+                        if (userObject[i].email?.equals(binding.etEmail.text.toString())!!) {
+                            isExist = true
+                            Toast.makeText(this@DaftarActivity, "User sudah ada", Toast.LENGTH_LONG)
+                                .show()
+                            break
 
                         } else {
-                            val user = User()
-                            user.namaLengkap = binding.etNama.text.toString()
-                            user.email = binding.etEmail.text.toString()
-                            user.password = binding.etPassword.text.toString()
-                            val userDatabase = IwanMotorDatabase
-                            userDatabase.getDatabase(this@DaftarActivity)?.userDao()?.insertUserData(user)
-                            startActivity(Intent(this@DaftarActivity, HomeActivity::class.java))
+                            isExist = false
+                            continue
+
                         }
                     }
-                })
+                    if (isExist) {
+                        Toast.makeText(this@DaftarActivity, "Daftar berhasil", Toast.LENGTH_LONG)
+                            .show()
+
+
+                    } else {
+                        val user = User()
+                        user.namaLengkap = binding.etNama.text.toString()
+                        user.email = binding.etEmail.text.toString()
+                        user.password = binding.etPassword.text.toString()
+                        val userDatabase = IwanMotorDatabase
+                        userDatabase.getDatabase(this@DaftarActivity)?.userDao()
+                            ?.insertUserData(user)
+                        startActivity(Intent(this@DaftarActivity, HomeActivity::class.java))
+                    }
+                }
             }
         }
     }

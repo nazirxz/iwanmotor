@@ -4,6 +4,7 @@ import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import java.text.NumberFormat
+import java.util.*
 
 /**
  * Entity data class represents a single row in the database.
@@ -15,15 +16,16 @@ data class Barang(
     @ColumnInfo(name = "namaProduk")
     val namaProduk: String,
     @ColumnInfo(name = "hargaModal")
-    val hargaModal: String,
+    val hargaModal: Double,
     @ColumnInfo(name = "hargaJual")
-    val hargaJual: String,
+    val hargaJual: Double,
     @ColumnInfo(name = "stok")
-    val stok: String,
+    val stok: Int,
     @ColumnInfo(name = "tglMasuk")
     val tglMasuk: String,
 )
-fun Barang.getFormattedPrice(): String =
-    java.text.NumberFormat.getCurrencyInstance().format(hargaModal)
-fun Barang.getFormattedPrice2(): String =
-    java.text.NumberFormat.getCurrencyInstance().format(hargaJual)
+
+//fun Barang.getFormattedPrice(): String =
+//    NumberFormat.getCurrencyInstance(Locale("id","ID")).format(hargaModal)
+//fun Barang.getFormattedPrice2(): String =
+//    NumberFormat.getCurrencyInstance(Locale("id","ID")).format(hargaJual)

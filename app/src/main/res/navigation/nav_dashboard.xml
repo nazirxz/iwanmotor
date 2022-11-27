@@ -13,10 +13,47 @@
         android:id="@+id/navigation_barang"
         android:name="com.projek.iwanmotor.ui.barang.BarangFragment"
         android:label="fragment_barang"
-        tools:layout="@layout/fragment_barang" />
+        tools:layout="@layout/fragment_barang" >
+        <action
+            android:id="@+id/action_navigation_barang_to_tambahBarang"
+            app:destination="@id/tambahBarang" />
+        <action
+            android:id="@+id/action_navigation_barang_to_editBarang"
+            app:destination="@id/editBarang" />
+    </fragment>
     <fragment
         android:id="@+id/navigation_transaksi"
         android:name="com.projek.iwanmotor.ui.transaksi.TransaksiFragment"
         android:label="fragment_transaksi"
         tools:layout="@layout/fragment_transaksi" />
+    <fragment
+        android:id="@+id/tambahBarang"
+        android:name="com.projek.iwanmotor.ui.barang.TambahBarang"
+        android:label="TambahBarang"
+        tools:layout="@layout/fragment_tambah_barang">
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <argument
+            android:name="item_id"
+            android:defaultValue="-1"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_tambahBarang_to_navigation_barang"
+            app:destination="@id/navigation_barang"
+            app:popUpTo="@id/navigation_barang"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/editBarang"
+        android:name="com.projek.iwanmotor.ui.barang.EditBarang"
+        android:label="Edit Barang"
+        tools:layout="@layout/fragment_detail_barang">
+        <argument
+            android:name="item_id"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_editBarang_to_navigation_barang"
+            app:destination="@id/navigation_barang" />
+    </fragment>
 </navigation>

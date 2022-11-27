@@ -72,11 +72,10 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="@dimen/margin"
-            tools:context=".ItemListFragment">
+            android:layout_margin="@dimen/margin">
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/full_name_txt"
+                android:id="@+id/nama_produk_txt"
                 style="@style/inputText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -86,14 +85,15 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/input_full_name"
+                    android:id="@+id/input_nama_produk"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:maxLines="1" />
+                    android:layout_height="match_parent"
+                    android:inputType="textAutoComplete|textCapWords"
+                    android:singleLine="true" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/email_txt"
+                android:id="@+id/harga_modal_txt"
                 style="@style/inputText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -101,37 +101,38 @@
                 android:hint="@string/hargamodal"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/full_name_txt">
+                app:layout_constraintTop_toBottomOf="@id/nama_produk_txt"
+                app:prefixText="@string/currency_symbol">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/input_email"
+                    android:id="@+id/input_harga_modal"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:maxLines="1" />
+                    android:layout_height="match_parent"
+                    android:inputType="numberDecimal"
+                    android:singleLine="true" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/phone_number_txt"
+                android:id="@+id/harga_jual_txt"
                 style="@style/inputText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:hint="@string/hargajual"
+                app:prefixText="@string/currency_symbol"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/email_txt">
-
+                app:layout_constraintTop_toBottomOf="@id/harga_modal_txt">
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/input_phone_number"
+                    android:id="@+id/input_harga_jual"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:digits="0123456789+-"
-                    android:inputType="phone"
-                    android:maxLines="1" />
+                    android:layout_height="match_parent"
+                    android:inputType="numberDecimal"
+                    android:singleLine="true"/>
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/date_birth_txt"
+                android:id="@+id/stok_txt"
                 style="@style/inputText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -139,21 +140,18 @@
                 android:hint="@string/stok"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/phone_number_txt">
+                app:layout_constraintTop_toBottomOf="@id/harga_jual_txt">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/input_date_birth"
+                    android:id="@+id/input_stok"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:clickable="false"
-                    android:cursorVisible="false"
-                    android:focusable="false"
-                    android:focusableInTouchMode="false"
-                    android:maxLines="1" />
+                    android:layout_height="match_parent"
+                    android:inputType="number"
+                    android:singleLine="true"/>
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/address_txt"
+                android:id="@+id/tglmasuk_txt"
                 style="@style/inputText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -161,12 +159,14 @@
                 android:hint="@string/tglmasuk"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/date_birth_txt">
+                app:layout_constraintTop_toBottomOf="@id/stok_txt">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/input_address"
+                    android:id="@+id/input_tgl_masuk"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:inputType="date"
+                    android:focusableInTouchMode="false"
                     android:maxLines="1" />
             </com.google.android.material.textfield.TextInputLayout>
 
