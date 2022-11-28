@@ -1,13 +1,10 @@
 package com.projek.iwanmotor.ui.barang
 
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.asLiveData
-import androidx.lifecycle.viewModelScope
+import androidx.lifecycle.*
 import com.projek.iwanmotor.data.barang.Barang
 import com.projek.iwanmotor.data.barang.BarangDao
+import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.launch
 
 class BarangViewModel(private val barangDao : BarangDao) : ViewModel() {
@@ -37,9 +34,6 @@ class BarangViewModel(private val barangDao : BarangDao) : ViewModel() {
         updateItem(updatedItem)
     }
 
-    fun getStok(namaProduk: String):LiveData<Barang> {
-        return barangDao.getStok(namaProduk).asLiveData()
-    }
 
     /**
      * Launching a new coroutine to update an item in a non-blocking way
@@ -50,6 +44,13 @@ class BarangViewModel(private val barangDao : BarangDao) : ViewModel() {
         }
     }
 
+    fun getTotalStok(total:Barang): Barang {
+        viewModelScope.launch {
+            barangDao.getTotalStok()
+        }
+        return total
+    }
+
     /**
      * Decreases the stock by one unit and updates the database.
      */
@@ -58,6 +59,11 @@ class BarangViewModel(private val barangDao : BarangDao) : ViewModel() {
             // Decrease the quantity by 1
             val newItem = item.copy(stok = item.stok - 1)
             updateItem(newItem)
+        }
+    }
+    fun updateStok(namaProduk: String) {
+        viewModelScope.launch {
+            barangDao.updateStok(namaProduk)
         }
     }
 
@@ -94,6 +100,9 @@ class BarangViewModel(private val barangDao : BarangDao) : ViewModel() {
     fun retrieveItem(id: Int): LiveData<Barang> {
         return barangDao.getItem(id).asLiveData()
     }
+
+    fun getTotalStok() = barangDao.getTotalStok().asLiveData()
+    fun getTotalKasKeluar() = barangDao.getTotalKasKeluar().asLiveData()
 
     /**
      * Returns true if the EditTexts are not empty

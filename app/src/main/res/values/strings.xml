@@ -15,7 +15,7 @@
     <string name="linkMasuk">Masuk di sini</string>
 
     <!--    Dashboard -->
-    <string name="home_greeting">Hello, %s</string>
+    <string name="home_greeting">Hello, User</string>
     <string name="datetime">Monday,17 May 2022</string>
     <string name="Dashboard"><u>Dashboard</u></string>
 

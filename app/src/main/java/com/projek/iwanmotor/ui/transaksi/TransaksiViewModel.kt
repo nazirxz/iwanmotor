@@ -38,6 +38,9 @@ class TransaksiViewModel(private val transaksiDao: TransaksiDao): ViewModel(){
     }
 
 
+    fun getTotalKasMasuk() = transaksiDao.getTotalKasMasuk().asLiveData()
+    fun getTotalPenjualan() = transaksiDao.getTotalPenjualan().asLiveData()
+
 
     /**
      * Launching a new coroutine to update an transaksi in a non-blocking way

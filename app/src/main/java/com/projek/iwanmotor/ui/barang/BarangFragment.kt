@@ -17,6 +17,7 @@ import com.projek.iwanmotor.data.barang.BarangRoomDatabase
 import com.projek.iwanmotor.data.barang.IwanMotorApplication
 import com.projek.iwanmotor.databinding.FragmentBarangBinding
 import com.projek.iwanmotor.ui.login.LoginViewModel
+import com.projek.iwanmotor.utils.Utility.dateNow
 
 class BarangFragment : Fragment() {
     lateinit var item: Barang
@@ -45,6 +46,7 @@ class BarangFragment : Fragment() {
                 BarangFragmentDirections.actionNavigationBarangToEditBarang(it.id)
             this.findNavController().navigate(action)
         }
+        binding.tvDate.dateNow()
         binding.recyclerView.layoutManager = LinearLayoutManager(this.context)
         binding.recyclerView.adapter = adapter
         // Attach an observer on the allItems list to update the UI automatically when the data

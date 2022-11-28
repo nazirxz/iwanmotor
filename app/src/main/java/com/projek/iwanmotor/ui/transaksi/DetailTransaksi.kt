@@ -22,6 +22,7 @@ import com.projek.iwanmotor.ui.barang.BarangViewModel
 import com.projek.iwanmotor.ui.barang.BarangViewModelFactory
 import com.projek.iwanmotor.ui.barang.EditBarangArgs
 import com.projek.iwanmotor.ui.barang.EditBarangDirections
+import com.projek.iwanmotor.utils.Utility.dateNow
 import java.text.DateFormatSymbols
 import java.text.SimpleDateFormat
 import java.util.*
@@ -35,6 +36,12 @@ class DetailTransaksi : Fragment() {
             (activity?.application as IwanMotorApplication).database2.transaksiDao()
         )
     }
+    private val viewModelBarang: BarangViewModel by activityViewModels {
+        BarangViewModelFactory(
+            (activity?.application as IwanMotorApplication).database.barangDao()
+        )
+    }
+
 
     private var _binding: FragmentDetailTransaksiBinding? = null
     private val binding get() = _binding!!
@@ -118,6 +125,7 @@ class DetailTransaksi : Fragment() {
             transaksi = selectedItem
             bind(transaksi)
         }
+        binding.tvDate.dateNow()
         setUpDatePicker()
     }
     private fun updateLabel() {

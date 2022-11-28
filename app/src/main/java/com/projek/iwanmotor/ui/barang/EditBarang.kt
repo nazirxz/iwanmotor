@@ -15,6 +15,7 @@ import com.projek.iwanmotor.R
 import com.projek.iwanmotor.data.barang.Barang
 import com.projek.iwanmotor.data.barang.IwanMotorApplication
 import com.projek.iwanmotor.databinding.FragmentDetailBarangBinding
+import com.projek.iwanmotor.utils.Utility.dateNow
 import java.text.DateFormatSymbols
 import java.text.DecimalFormat
 import java.text.NumberFormat
@@ -119,6 +120,7 @@ class EditBarang : Fragment() {
            barang = selectedItem
             bind(barang)
         }
+        binding.tvDate.dateNow()
         setUpDatePicker()
     }
 

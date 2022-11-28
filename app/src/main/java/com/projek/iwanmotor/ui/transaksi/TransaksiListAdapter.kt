@@ -35,10 +35,9 @@ class TransaksiListAdapter (private val onItemClicked: (Transaksi) -> Unit) :
     class ItemViewHolder(private var binding: ItemTransaksiListBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(item: Transaksi) {
-            fun getFormattedPrice(): String = NumberFormat.getCurrencyInstance(Locale("id","ID")).format(item.jumlah)
             fun getFormattedPrice2(): String = NumberFormat.getCurrencyInstance(Locale("id","ID")).format(item.subtotal)
             binding.itemInvoice.text = item.invoice
-            binding.itemJumlah.text = getFormattedPrice()
+            binding.itemJumlah.text = item.jumlah.toString()
             binding.itemSubtotal.text = getFormattedPrice2()
             binding.itemTglBeli.text = item.tglPembelian
         }

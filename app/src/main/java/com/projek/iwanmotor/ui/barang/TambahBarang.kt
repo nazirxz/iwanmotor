@@ -17,6 +17,7 @@ import com.projek.iwanmotor.R
 import com.projek.iwanmotor.data.barang.Barang
 import com.projek.iwanmotor.data.barang.IwanMotorApplication
 import com.projek.iwanmotor.databinding.FragmentTambahBarangBinding
+import com.projek.iwanmotor.utils.Utility.dateNow
 import java.text.DateFormatSymbols
 import java.text.SimpleDateFormat
 import java.util.*
@@ -136,6 +137,8 @@ class TambahBarang : Fragment() {
                 addNewItem()
             }
         }
+        binding.tvDate.dateNow()
+
     }
 
     /**

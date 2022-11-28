@@ -85,12 +85,11 @@
 
                 <TextView
                     android:id="@+id/angka_totalPenjualan"
-                    style="@style/TextView.DmsansNormal22sp020202"
+                    style="@style/TextView.DmsansNormal18sp020202"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="16dp"
                     android:text="@string/angkatotal_penjualan"
-
                     app:layout_constraintBottom_toBottomOf="@id/tv_total_penjualan"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.533"
@@ -144,7 +143,7 @@
 
                 <TextView
                     android:id="@+id/angka_totalStok"
-                    style="@style/TextView.DmsansNormal22sp020202"
+                    style="@style/TextView.DmsansNormal18sp020202"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="16dp"
@@ -201,7 +200,7 @@
 
                 <TextView
                     android:id="@+id/angka_kaskeluar"
-                    style="@style/TextView.DmsansNormal22sp020202"
+                    style="@style/TextView.DmsansNormal18sp020202"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/angkatotal_kaskeluar"
@@ -255,7 +254,7 @@
 
                 <TextView
                     android:id="@+id/angka_kasmasuk"
-                    style="@style/TextView.DmsansNormal22sp020202"
+                    style="@style/TextView.DmsansNormal18sp020202"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="16dp"
@@ -310,7 +309,7 @@
 
                 <TextView
                     android:id="@+id/angka_kas"
-                    style="@style/TextView.DmsansNormal22sp020202"
+                    style="@style/TextView.DmsansNormal18sp020202"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/angkatotal_kasmasuk"

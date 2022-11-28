@@ -23,18 +23,18 @@
         <entry key="..\:/JOKIII/RIAN-ANDROID/IwanMotor/app/src/main/res/layout/activity_kas.xml" value="0.13247863247863248" />
         <entry key="..\:/JOKIII/RIAN-ANDROID/IwanMotor/app/src/main/res/layout/activity_login.xml" value="0.22" />
         <entry key="..\:/JOKIII/RIAN-ANDROID/IwanMotor/app/src/main/res/layout/activity_main.xml" value="0.18541666666666667" />
-        <entry key="..\:/JOKIII/RIAN-ANDROID/IwanMotor/app/src/main/res/layout/activity_register.xml" value="0.1" />
+        <entry key="..\:/JOKIII/RIAN-ANDROID/IwanMotor/app/src/main/res/layout/activity_register.xml" value="0.5" />
         <entry key="..\:/JOKIII/RIAN-ANDROID/IwanMotor/app/src/main/res/layout/activity_splashscreen.xml" value="0.25" />
         <entry key="..\:/JOKIII/RIAN-ANDROID/IwanMotor/app/src/main/res/layout/activity_transaksi.xml" value="0.25" />
-        <entry key="..\:/JOKIII/RIAN-ANDROID/IwanMotor/app/src/main/res/layout/fragment_barang.xml" value="0.5" />
-        <entry key="..\:/JOKIII/RIAN-ANDROID/IwanMotor/app/src/main/res/layout/fragment_dashboard.xml" value="0.18" />
+        <entry key="..\:/JOKIII/RIAN-ANDROID/IwanMotor/app/src/main/res/layout/fragment_barang.xml" value="0.1" />
+        <entry key="..\:/JOKIII/RIAN-ANDROID/IwanMotor/app/src/main/res/layout/fragment_dashboard.xml" value="0.33" />
         <entry key="..\:/JOKIII/RIAN-ANDROID/IwanMotor/app/src/main/res/layout/fragment_detail_barang.xml" value="0.25" />
         <entry key="..\:/JOKIII/RIAN-ANDROID/IwanMotor/app/src/main/res/layout/fragment_detail_transaksi.xml" value="0.33" />
         <entry key="..\:/JOKIII/RIAN-ANDROID/IwanMotor/app/src/main/res/layout/fragment_edit_barang.xml" value="0.3578125" />
         <entry key="..\:/JOKIII/RIAN-ANDROID/IwanMotor/app/src/main/res/layout/fragment_tambah_barang.xml" value="0.1" />
-        <entry key="..\:/JOKIII/RIAN-ANDROID/IwanMotor/app/src/main/res/layout/fragment_tambah_transaksi.xml" value="0.1" />
-        <entry key="..\:/JOKIII/RIAN-ANDROID/IwanMotor/app/src/main/res/layout/fragment_transaksi.xml" value="0.33" />
-        <entry key="..\:/JOKIII/RIAN-ANDROID/IwanMotor/app/src/main/res/layout/item_barang_list.xml" value="0.33" />
+        <entry key="..\:/JOKIII/RIAN-ANDROID/IwanMotor/app/src/main/res/layout/fragment_tambah_transaksi.xml" value="0.22" />
+        <entry key="..\:/JOKIII/RIAN-ANDROID/IwanMotor/app/src/main/res/layout/fragment_transaksi.xml" value="0.1" />
+        <entry key="..\:/JOKIII/RIAN-ANDROID/IwanMotor/app/src/main/res/layout/item_barang_list.xml" value="0.19230769230769232" />
         <entry key="..\:/JOKIII/RIAN-ANDROID/IwanMotor/app/src/main/res/layout/item_transaksi_list.xml" value="0.33" />
         <entry key="..\:/JOKIII/RIAN-ANDROID/IwanMotor/app/src/main/res/menu/navigasi_bawah.xml" value="0.18229166666666666" />
       </map>

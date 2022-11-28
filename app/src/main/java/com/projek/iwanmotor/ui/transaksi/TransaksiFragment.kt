@@ -19,6 +19,7 @@ import com.projek.iwanmotor.ui.barang.BarangFragmentDirections
 import com.projek.iwanmotor.ui.barang.BarangListAdapter
 import com.projek.iwanmotor.ui.barang.BarangViewModel
 import com.projek.iwanmotor.ui.barang.BarangViewModelFactory
+import com.projek.iwanmotor.utils.Utility.dateNow
 
 
 class TransaksiFragment : Fragment() {
@@ -58,6 +59,7 @@ class TransaksiFragment : Fragment() {
         binding.floatingActionButton.setOnClickListener {
             findNavController().navigate(R.id.action_navigation_transaksi_to_tambahTransaksi)
         }
+        binding.tvDate.dateNow()
     }
 
     override fun onDestroyView() {

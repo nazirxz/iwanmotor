@@ -1,5 +1,6 @@
 package com.projek.iwanmotor.data.transaksi
 
+import androidx.lifecycle.LiveData
 import androidx.room.*
 import kotlinx.coroutines.flow.Flow
 
@@ -11,6 +12,12 @@ interface TransaksiDao {
 
     @Query("SELECT * from transaksi WHERE id = :id")
     fun getTransaksi(id: Int): Flow<Transaksi>
+
+    @Query("SELECT SUM(subtotal) FROM transaksi")
+    fun getTotalKasMasuk():Flow<Int>
+
+    @Query("SELECT COUNT(id) From transaksi")
+    fun getTotalPenjualan(): Flow<Int>
 
     // Specify the conflict strategy as IGNORE, when the Barang tries to add an
     // existing Barang into the database Room ignores the conflict.

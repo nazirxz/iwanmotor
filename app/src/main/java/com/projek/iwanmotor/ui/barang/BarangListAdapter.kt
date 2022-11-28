@@ -35,7 +35,7 @@ class BarangListAdapter (private val onItemClicked: (Barang) -> Unit) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(item: Barang) {
            fun getFormattedPrice(): String = NumberFormat.getCurrencyInstance(Locale("id","ID")).format(item.hargaModal)
-fun getFormattedPrice2(): String = NumberFormat.getCurrencyInstance(Locale("id","ID")).format(item.hargaJual)
+            fun getFormattedPrice2(): String = NumberFormat.getCurrencyInstance(Locale("id","ID")).format(item.hargaJual)
             binding.itemNamaproduk.text = item.namaProduk
             binding.itemHargamodal.text = getFormattedPrice()
             binding.itemHargajual.text = getFormattedPrice2()

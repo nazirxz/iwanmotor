@@ -11,15 +11,11 @@
         android:id="@+id/item_invoice"
         android:layout_width="60dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
         android:text="@string/invoice"
-        android:textAlignment="center"
         android:textSize="10sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/item_jumlah"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.529" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/item_jumlah"
@@ -40,7 +36,7 @@
         android:layout_width="60dp"
         android:layout_height="wrap_content"
         android:text="@string/subtotal"
-        android:textAlignment="center"
+        android:layout_marginStart="25dp"
         android:textSize="10sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/item_tglBeli"
@@ -54,7 +50,7 @@
         android:layout_width="107dp"
         android:layout_height="14dp"
         android:layout_marginEnd="52dp"
-        android:layout_marginStart="25dp"
+        android:layout_marginStart="15dp"
         android:text="@string/tglpembelian"
         android:textAlignment="center"
         android:textSize="10sp"
