@@ -37,6 +37,9 @@ class BarangViewModel(private val barangDao : BarangDao) : ViewModel() {
         updateItem(updatedItem)
     }
 
+    fun getStok(namaProduk: String):LiveData<Barang> {
+        return barangDao.getStok(namaProduk).asLiveData()
+    }
 
     /**
      * Launching a new coroutine to update an item in a non-blocking way
@@ -65,6 +68,7 @@ class BarangViewModel(private val barangDao : BarangDao) : ViewModel() {
         val newItem = getNewItemEntry(namaProduk, hargaModal,hargaJual, itemCount, tglMasuk)
         insertItem(newItem)
     }
+
 
     /**
      * Launching a new coroutine to insert an item in a non-blocking way

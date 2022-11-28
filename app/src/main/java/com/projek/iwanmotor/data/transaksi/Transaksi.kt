@@ -10,17 +10,18 @@ import java.text.NumberFormat
  */
 @Entity
 data class Transaksi(
-    @PrimaryKey
+    @PrimaryKey(autoGenerate = true)
+    val id: Int = 0,
     @ColumnInfo(name = "invoice")
-    val invoice: String= "",
+    val invoice: String,
     @ColumnInfo(name = "namaProduk")
     val namaProduk: String,
     @ColumnInfo(name = "harga")
-    val harga: String,
+    val harga: Double,
     @ColumnInfo(name = "jumlah")
-    val hjumlah: String,
+    val jumlah: Int,
     @ColumnInfo(name = "subtotal")
-    val subtotal: String,
+    val subtotal: Double,
     @ColumnInfo(name = "tglPembelian")
     val tglPembelian: String,
 )

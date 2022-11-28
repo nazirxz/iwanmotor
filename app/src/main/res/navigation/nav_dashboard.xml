@@ -21,11 +21,7 @@
             android:id="@+id/action_navigation_barang_to_editBarang"
             app:destination="@id/editBarang" />
     </fragment>
-    <fragment
-        android:id="@+id/navigation_transaksi"
-        android:name="com.projek.iwanmotor.ui.transaksi.TransaksiFragment"
-        android:label="fragment_transaksi"
-        tools:layout="@layout/fragment_transaksi" />
+
     <fragment
         android:id="@+id/tambahBarang"
         android:name="com.projek.iwanmotor.ui.barang.TambahBarang"
@@ -55,5 +51,45 @@
         <action
             android:id="@+id/action_editBarang_to_navigation_barang"
             app:destination="@id/navigation_barang" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_transaksi"
+        android:name="com.projek.iwanmotor.ui.transaksi.TransaksiFragment"
+        android:label="fragment_transaksi"
+        tools:layout="@layout/fragment_transaksi" >
+        <action
+            android:id="@+id/action_navigation_transaksi_to_tambahTransaksi"
+            app:destination="@id/tambahTransaksi" />
+        <action
+            android:id="@+id/action_navigation_transaksi_to_detailTransaksi"
+            app:destination="@id/detailTransaksi" />
+    </fragment>
+    <fragment
+        android:id="@+id/tambahTransaksi"
+        android:name="com.projek.iwanmotor.ui.transaksi.TambahTransaksi"
+        android:label="TambahTransaksi"
+        tools:layout="@layout/fragment_tambah_transaksi">
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <argument
+            android:name="item_id"
+            android:defaultValue="-1"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_tambahTransaksi_to_navigation_transaksi"
+            app:destination="@id/navigation_transaksi" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailTransaksi"
+        android:name="com.projek.iwanmotor.ui.transaksi.DetailTransaksi"
+        android:label="DetailTransaksi"
+        tools:layout="@layout/fragment_detail_transaksi">
+        <argument
+            android:name="item_id"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_detailTransaksi_to_navigation_transaksi"
+            app:destination="@id/navigation_transaksi" />
     </fragment>
 </navigation>

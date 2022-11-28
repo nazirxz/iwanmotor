@@ -1,5 +1,6 @@
 package com.projek.iwanmotor.ui.barang
 
+import android.app.DatePickerDialog
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -14,8 +15,10 @@ import com.projek.iwanmotor.R
 import com.projek.iwanmotor.data.barang.Barang
 import com.projek.iwanmotor.data.barang.IwanMotorApplication
 import com.projek.iwanmotor.databinding.FragmentDetailBarangBinding
+import java.text.DateFormatSymbols
 import java.text.DecimalFormat
 import java.text.NumberFormat
+import java.text.SimpleDateFormat
 import java.util.*
 
 
@@ -27,6 +30,7 @@ import java.util.*
 class EditBarang : Fragment() {
     private val navigationArgs: EditBarangArgs by navArgs()
     lateinit var barang: Barang
+    private var calendar = Calendar.getInstance()
 
     private val viewModel: BarangViewModel by activityViewModels {
         BarangViewModelFactory(
@@ -50,7 +54,7 @@ class EditBarang : Fragment() {
         binding.apply {
             inputNamaProduk.setText(barang.namaProduk)
             inputHargaModal.setText(price)
-            inputHargaJual.setText(price2)c 
+            inputHargaJual.setText(price2)
             inputStok.setText(barang.stok.toString())
             inputTglMasuk.setText(barang.tglMasuk)
             deleteBtn.isEnabled = viewModel.isStockAvailable(barang)
@@ -58,10 +62,6 @@ class EditBarang : Fragment() {
             deleteBtn.setOnClickListener { showConfirmationDialog() }
             addBtn.setOnClickListener { updateItem() }
         }
-    }
-    fun formatCurrency(amount: String): String? {
-        val formatter = DecimalFormat("###,###,##0.00")
-        return formatter.format(amount.toDouble())
     }
     private fun updateItem() {
         if (isEntryValid()) {
@@ -119,6 +119,7 @@ class EditBarang : Fragment() {
            barang = selectedItem
             bind(barang)
         }
+        setUpDatePicker()
     }
 
     /**
@@ -127,5 +128,37 @@ class EditBarang : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+    private fun updateLabel() {
+        val formatter = SimpleDateFormat("d MMMM y", Locale.US)
+        binding.inputTglMasuk.setText(formatter.format(calendar.time))
+    }
+
+    private fun setUpDatePicker() {
+        val date = DatePickerDialog.OnDateSetListener { _, year, monthOfYear, dayOfMonth ->
+            calendar.set(Calendar.YEAR, year)
+            calendar.set(Calendar.MONTH, monthOfYear)
+            calendar.set(Calendar.DAY_OF_MONTH, dayOfMonth)
+            updateLabel()
+        }
+        binding.inputTglMasuk.setOnClickListener {
+            val months = DateFormatSymbols.getInstance().months
+            val dateNow = binding.inputTglMasuk.text.toString()
+            val splitDate = dateNow.split(" ")
+            if (splitDate.size == 3) {
+                DatePickerDialog(
+                    requireActivity(), date, splitDate[2].toInt(), months.indexOf(splitDate[1]),
+                    splitDate[0].toInt()
+                ).show()
+            } else {
+                DatePickerDialog(
+                    requireActivity(),
+                    date,
+                    calendar.get(Calendar.YEAR),
+                    calendar.get(Calendar.MONTH),
+                    calendar.get(Calendar.DAY_OF_MONTH)
+                ).show()
+            }
+        }
     }
 }

@@ -29,12 +29,13 @@
         <entry key="..\:/JOKIII/RIAN-ANDROID/IwanMotor/app/src/main/res/layout/fragment_barang.xml" value="0.5" />
         <entry key="..\:/JOKIII/RIAN-ANDROID/IwanMotor/app/src/main/res/layout/fragment_dashboard.xml" value="0.18" />
         <entry key="..\:/JOKIII/RIAN-ANDROID/IwanMotor/app/src/main/res/layout/fragment_detail_barang.xml" value="0.25" />
-        <entry key="..\:/JOKIII/RIAN-ANDROID/IwanMotor/app/src/main/res/layout/fragment_detail_transaksi.xml" value="0.18229166666666666" />
+        <entry key="..\:/JOKIII/RIAN-ANDROID/IwanMotor/app/src/main/res/layout/fragment_detail_transaksi.xml" value="0.33" />
         <entry key="..\:/JOKIII/RIAN-ANDROID/IwanMotor/app/src/main/res/layout/fragment_edit_barang.xml" value="0.3578125" />
         <entry key="..\:/JOKIII/RIAN-ANDROID/IwanMotor/app/src/main/res/layout/fragment_tambah_barang.xml" value="0.1" />
-        <entry key="..\:/JOKIII/RIAN-ANDROID/IwanMotor/app/src/main/res/layout/fragment_tambah_transaksi.xml" value="0.19375" />
+        <entry key="..\:/JOKIII/RIAN-ANDROID/IwanMotor/app/src/main/res/layout/fragment_tambah_transaksi.xml" value="0.1" />
         <entry key="..\:/JOKIII/RIAN-ANDROID/IwanMotor/app/src/main/res/layout/fragment_transaksi.xml" value="0.33" />
         <entry key="..\:/JOKIII/RIAN-ANDROID/IwanMotor/app/src/main/res/layout/item_barang_list.xml" value="0.33" />
+        <entry key="..\:/JOKIII/RIAN-ANDROID/IwanMotor/app/src/main/res/layout/item_transaksi_list.xml" value="0.33" />
         <entry key="..\:/JOKIII/RIAN-ANDROID/IwanMotor/app/src/main/res/menu/navigasi_bawah.xml" value="0.18229166666666666" />
       </map>
     </option>

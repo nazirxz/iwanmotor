@@ -22,5 +22,7 @@ import com.projek.iwanmotor.data.IwanMotorDatabase
 class IwanMotorApplication : Application() {
     // Using by lazy so the database is only created when needed
     // rather than when the application starts
-    val database:  BarangRoomDatabase by lazy { BarangRoomDatabase.getDatabase(this) }
+    val database2:  BarangRoomDatabase by lazy { BarangRoomDatabase.getDatabase(this)}
+    val database:  BarangRoomDatabase by lazy { BarangRoomDatabase.getDatabase(this)}
+
 }

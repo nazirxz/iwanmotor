@@ -74,5 +74,6 @@
     <string name="delete_question">Apakah anda yakin untuk ngehapus data ini?</string>
     <string name="no">Tidak</string>
     <string name="yes">Ya</string>
+    <string name="title_detail_transaksi"><u>Detail Transaksi</u></string>
 
 </resources>

@@ -15,9 +15,11 @@ interface BarangDao {
     @Query("SELECT * from barang ORDER BY namaProduk ASC")
     fun getItems(): Flow<List<Barang>>
 
-
     @Query("SELECT * from Barang WHERE id = :id")
     fun getItem(id: Int): Flow<Barang>
+
+    @Query("SELECT * from Barang WHERE namaProduk=:namaProduk")
+    fun getStok(namaProduk: String): Flow<Barang>
 
     // Specify the conflict strategy as IGNORE, when the Barang tries to add an
     // existing Barang into the database Room ignores the conflict.
