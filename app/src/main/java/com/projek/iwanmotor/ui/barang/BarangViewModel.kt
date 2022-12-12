@@ -19,18 +19,26 @@ class BarangViewModel(private val barangDao : BarangDao) : ViewModel() {
         return (item.stok.toInt() > 0)
     }
 
+    fun getStok(namaProduk: String): Boolean {
+        return (barangDao.getStok(namaProduk)>0)
+    }
+    fun isAvailable(jumlah: String,namaProduk: String):Boolean {
+        return (barangDao.getStok(namaProduk)>=jumlah.toInt())
+    }
+
     /**
      * Updates an existing Item in the database.
      */
     fun updateItem(
         barangId: Int,
         namaProduk: String,
-        hargaModal: String,
-        hargaJual: String,
+        hargaModal: Double,
+        hargaJual: Double,
         itemCount: String,
         tglMasuk: String
     ) {
-        val updatedItem = getUpdatedItemEntry(barangId, namaProduk, hargaModal,hargaJual, itemCount,tglMasuk)
+        val updatedItem = getUpdatedItemEntry(barangId, namaProduk,
+            hargaModal, hargaJual, itemCount,tglMasuk)
         updateItem(updatedItem)
     }
 
@@ -44,12 +52,6 @@ class BarangViewModel(private val barangDao : BarangDao) : ViewModel() {
         }
     }
 
-    fun getTotalStok(total:Barang): Barang {
-        viewModelScope.launch {
-            barangDao.getTotalStok()
-        }
-        return total
-    }
 
     /**
      * Decreases the stock by one unit and updates the database.
@@ -135,16 +137,16 @@ class BarangViewModel(private val barangDao : BarangDao) : ViewModel() {
     private fun getUpdatedItemEntry(
         barangId: Int,
         namaProduk: String,
-        hargaModal: String,
-        hargaJual: String,
+        hargaModal: Double,
+        hargaJual: Double,
         itemCount: String,
         tglMasuk: String
     ): Barang {
         return Barang(
             id = barangId,
             namaProduk = namaProduk,
-            hargaModal = hargaModal.toDouble(),
-            hargaJual = hargaJual.toDouble(),
+            hargaModal = hargaModal,
+            hargaJual = hargaJual,
             stok = itemCount.toInt(),
             tglMasuk = tglMasuk
         )

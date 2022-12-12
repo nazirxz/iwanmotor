@@ -27,13 +27,14 @@ class TransaksiViewModel(private val transaksiDao: TransaksiDao): ViewModel(){
     }
     fun updateTransaksi(
         transaksId: Int,
+        invoice:String,
         namaProduk: String,
         harga: String,
         jumlah: String,
         subtotal: String,
         tglBeli: String
     ){
-        val updatedBarang = getUpdatedtransaksiEntry2(transaksId, namaProduk, harga,jumlah, subtotal,tglBeli)
+        val updatedBarang = getUpdatedtransaksiEntry2(transaksId, invoice,namaProduk, harga,jumlah, subtotal,tglBeli)
         updateBarang(updatedBarang)
     }
 
@@ -134,6 +135,7 @@ class TransaksiViewModel(private val transaksiDao: TransaksiDao): ViewModel(){
     }
     private fun getUpdatedtransaksiEntry2(
         transaksId: Int,
+        invoice: String,
         namaProduk: String,
         harga: String,
         jumlah: String,
@@ -142,7 +144,7 @@ class TransaksiViewModel(private val transaksiDao: TransaksiDao): ViewModel(){
     ): Transaksi {
         return Transaksi(
             id = transaksId,
-            invoice = "",
+            invoice = invoice,
             namaProduk = namaProduk,
             harga = harga.toDouble(),
             jumlah = jumlah.toInt(),

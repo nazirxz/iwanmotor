@@ -13,6 +13,8 @@ import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import android.widget.ArrayAdapter
+import android.widget.Toast
+import com.projek.iwanmotor.data.barang.Barang
 import com.projek.iwanmotor.data.barang.IwanMotorApplication
 import com.projek.iwanmotor.data.transaksi.Transaksi
 import com.projek.iwanmotor.databinding.FragmentTambahTransaksiBinding
@@ -98,18 +100,32 @@ class TambahTransaksi : Fragment() {
      * Inserts the new Item into database and navigates up to list fragment.
      */
     private fun addNewItem() {
+        val stok = viewModel2.getStok(binding.namaProdukTxt.selectedItem.toString())
+        val available = viewModel2.isAvailable(binding.inputJumlah.text.toString(),binding.namaProdukTxt.selectedItem.toString())
         if (isEntryValid()) {
-            viewModel.addNewTransaksi(
-                randomString(6),
-                binding.namaProdukTxt.selectedItem.toString(),
-                binding.inputHarga.text.toString(),
-                binding.inputJumlah.text.toString(),
-                binding.inputSubtotal.text.toString(),
-                binding.inputTglPembelian.text.toString()
-            )
-            viewModel2.updateStok(binding.namaProdukTxt.selectedItem.toString(),binding.inputJumlah.text.toString())
-            val action = TambahTransaksiDirections.actionTambahTransaksiToNavigationTransaksi()
-            findNavController().navigate(action)
+            if (stok) {
+                Log.d("Status",stok.toString())
+                Log.d("Status isAvailable",available.toString())
+                if (available==true) {
+                    viewModel.addNewTransaksi(
+                        randomString(6),
+                        binding.namaProdukTxt.selectedItem.toString(),
+                        binding.inputHarga.text.toString(),
+                        binding.inputJumlah.text.toString(),
+                        binding.inputSubtotal.text.toString(),
+                        binding.inputTglPembelian.text.toString()
+                    )
+                    viewModel2.updateStok(binding.namaProdukTxt.selectedItem.toString(),binding.inputJumlah.text.toString())
+                    val action = TambahTransaksiDirections.actionTambahTransaksiToNavigationTransaksi()
+                    findNavController().navigate(action)
+                } else {
+                    Toast.makeText(requireContext(), "Stok barang tidak cukup", Toast.LENGTH_LONG)
+                        .show()
+                }
+            } else {
+                Toast.makeText(requireContext(), "Stok barang tidak tersedia", Toast.LENGTH_LONG)
+                    .show()
+            }
         }
     }
     /**

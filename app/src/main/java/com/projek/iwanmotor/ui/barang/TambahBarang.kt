@@ -107,8 +107,8 @@ class TambahBarang : Fragment() {
             viewModel.updateItem(
                 this.navigationArgs.itemId,
                 binding.inputNamaProduk.text.toString(),
-                binding.inputHargaModal.text.toString(),
-                binding.inputHargaJual.text.toString(),
+                binding.inputHargaModal.text.toString().toDouble(),
+                binding.inputHargaJual.text.toString().toDouble(),
                 binding.inputStok.text.toString(),
                 binding.inputTglMasuk.text.toString()
             )

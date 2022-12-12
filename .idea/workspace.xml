@@ -18,19 +18,15 @@
       <change beforePath="$PROJECT_DIR$/.gradle/7.3.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.3.3/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/app/IwanMotor.app.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/IwanMotor.app.main.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/app/IwanMotor.app.unitTest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/IwanMotor.app.unitTest.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/projek/iwanmotor/data/barang/Barang.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/projek/iwanmotor/data/barang/Barang.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/projek/iwanmotor/data/barang/BarangDao.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/projek/iwanmotor/data/barang/BarangDao.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/projek/iwanmotor/data/barang/BarangRoomDatabase.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/projek/iwanmotor/data/barang/BarangRoomDatabase.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/projek/iwanmotor/ui/barang/BarangViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/projek/iwanmotor/ui/barang/BarangViewModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/projek/iwanmotor/ui/dashboard/DashboardFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/projek/iwanmotor/ui/dashboard/DashboardFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/projek/iwanmotor/ui/barang/EditBarang.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/projek/iwanmotor/ui/barang/EditBarang.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/projek/iwanmotor/ui/barang/TambahBarang.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/projek/iwanmotor/ui/barang/TambahBarang.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/projek/iwanmotor/ui/transaksi/DetailTransaksi.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/projek/iwanmotor/ui/transaksi/DetailTransaksi.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/projek/iwanmotor/ui/transaksi/TambahTransaksi.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/projek/iwanmotor/ui/transaksi/TambahTransaksi.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/projek/iwanmotor/ui/transaksi/TransaksiFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/projek/iwanmotor/ui/transaksi/TransaksiFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/projek/iwanmotor/ui/transaksi/TransaksiViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/projek/iwanmotor/ui/transaksi/TransaksiViewModel.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_detail_transaksi.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_detail_transaksi.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_tambah_transaksi.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_tambah_transaksi.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -315,7 +311,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669656831506</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="backend - revision(select data spinner and kurang stok jika ditambah)">
+      <created>1670841403494</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1670841403494</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -349,6 +352,7 @@
     <MESSAGE value="backend - navigation bottom (done)" />
     <MESSAGE value="backend - data transaksi (Done)" />
     <MESSAGE value="backend - all done" />
-    <option name="LAST_COMMIT_MESSAGE" value="backend - all done" />
+    <MESSAGE value="backend - revision(select data spinner and kurang stok jika ditambah)" />
+    <option name="LAST_COMMIT_MESSAGE" value="backend - revision(select data spinner and kurang stok jika ditambah)" />
   </component>
 </project>

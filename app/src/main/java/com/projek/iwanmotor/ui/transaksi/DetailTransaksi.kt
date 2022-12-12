@@ -55,14 +55,14 @@ class DetailTransaksi : Fragment() {
     }
 
     private fun bind(item: Transaksi) {
-        val price = "%.2f".format(item.harga)
-        val price2 = "%.2f".format(item.subtotal)
+//        val price = "%.2f".format(item.harga)
+//        val price2 = "%.2f".format(item.subtotal)
 
         binding.apply {
             inputNamaProduk.setText(transaksi.namaProduk)
-            inputHarga.setText(price)
+            inputHarga.setText(transaksi.harga.toString())
             inputJumlah.setText(transaksi.jumlah.toString())
-            inputSubtotal.setText(price2)
+            inputSubtotal.setText(transaksi.subtotal.toString())
             inputTglPembelian.setText(transaksi.tglPembelian)
             deleteBtn.setOnClickListener { viewModel.deletetransaksi(transaksi) }
             deleteBtn.setOnClickListener { showConfirmationDialog() }
@@ -73,13 +73,14 @@ class DetailTransaksi : Fragment() {
         if (isEntryValid()) {
             viewModel.updateTransaksi(
                 this.navigationArgs.itemId,
+                transaksi.invoice,
                 binding.inputNamaProduk.text.toString(),
                 binding.inputHarga.text.toString(),
                 binding.inputJumlah.text.toString(),
                 binding.inputSubtotal.text.toString(),
                 binding.inputTglPembelian.text.toString()
             )
-            val action = EditBarangDirections.actionEditBarangToNavigationBarang()
+            val action = DetailTransaksiDirections.actionDetailTransaksiToNavigationTransaksi()
             findNavController().navigate(action)
             Toast.makeText(requireContext(), "Data berhasil diubah", Toast.LENGTH_SHORT).show()
         }
@@ -126,6 +127,8 @@ class DetailTransaksi : Fragment() {
         }
         binding.tvDate.dateNow()
         setUpDatePicker()
+//        binding.inputInvoice.isClickable = false
+//        binding.inputInvoice.isFocusable = false
         binding.inputNamaProduk.isClickable = false
         binding.inputNamaProduk.isFocusable = false
     }

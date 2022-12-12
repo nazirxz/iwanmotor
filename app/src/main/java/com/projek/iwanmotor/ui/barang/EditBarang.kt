@@ -50,12 +50,12 @@ class EditBarang : Fragment() {
         return binding.root
     }
     private fun bind(barang: Barang) {
-        val price = "%.2f".format(barang.hargaJual)
-        val price2 = "%.2f".format(barang.hargaModal)
+//        val price = "%.2f".format(barang.hargaJual)
+//        val price2 = "%.2f".format(barang.hargaModal)
         binding.apply {
             inputNamaProduk.setText(barang.namaProduk)
-            inputHargaModal.setText(price)
-            inputHargaJual.setText(price2)
+            inputHargaModal.setText(barang.hargaModal.toString())
+            inputHargaJual.setText(barang.hargaJual.toString())
             inputStok.setText(barang.stok.toString())
             inputTglMasuk.setText(barang.tglMasuk)
             deleteBtn.isEnabled = viewModel.isStockAvailable(barang)
@@ -69,8 +69,8 @@ class EditBarang : Fragment() {
             viewModel.updateItem(
                 this.navigationArgs.itemId,
                 binding.inputNamaProduk.text.toString(),
-                binding.inputHargaModal.text.toString(),
-                binding.inputHargaJual.text.toString(),
+                binding.inputHargaModal.text.toString().toDouble(),
+                binding.inputHargaJual.text.toString().toDouble(),
                 binding.inputStok.text.toString(),
                 binding.inputTglMasuk.text.toString()
             )
