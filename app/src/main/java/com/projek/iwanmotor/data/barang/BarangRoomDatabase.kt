@@ -44,7 +44,7 @@ abstract class BarangRoomDatabase : RoomDatabase() {
                     context.applicationContext,
                     BarangRoomDatabase::class.java,
                     "barangtrak_database"
-                )
+                ).allowMainThreadQueries()
                     // Wipes and rebuilds instead of migrating if no Migration object.
                     // Migration is not part of this codelab.
                     .fallbackToDestructiveMigration()

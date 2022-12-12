@@ -76,8 +76,9 @@
             android:layout_margin="@dimen/margin"
             tools:context=".ItemListFragment">
 
-            <com.google.android.material.textfield.TextInputLayout
+            <Spinner
                 android:id="@+id/nama_produk_txt"
+                android:background="@drawable/shape_rectangle_outline_8_020202"
                 style="@style/inputText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -85,14 +86,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/input_nama_produk"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:inputType="textAutoComplete|textCapWords"
-                    android:singleLine="true" />
-            </com.google.android.material.textfield.TextInputLayout>
+            </Spinner>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/harga_txt"

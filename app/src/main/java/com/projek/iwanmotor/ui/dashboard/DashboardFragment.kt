@@ -100,7 +100,6 @@ class DashboardFragment : Fragment() {
         }
         binding.tvDate.dateNow()
     }
-
     override fun onDestroyView() {
         super.onDestroyView()
         // Hide keyboard.

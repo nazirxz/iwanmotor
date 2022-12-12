@@ -14,12 +14,17 @@ interface BarangDao {
     @Query("SELECT * from Barang WHERE id = :id")
     fun getItem(id: Int): Flow<Barang>
 
+    @Query("SELECT * from Barang ORDER BY namaProduk ASC")
+    fun getAllProduk():LiveData<List<Barang>>
 
     @Query("SELECT SUM(hargaModal) FROM barang")
     fun getTotalKasKeluar():Flow<Int>
 
     @Query("SELECT SUM(stok) From barang")
     fun getTotalStok(): Flow<Int>
+
+    @Query("UPDATE Barang SET stok = stok-:jmlhStok WHERE namaProduk = :namaProduk")
+    fun updateStok(namaProduk: String,jmlhStok: Int)
 
 //    @Query("SELECT COUNT(id) FROM barang")
 //    fun getTotalStok(): LiveData<ArrayList<Barang>>
@@ -33,8 +38,6 @@ interface BarangDao {
     @Delete
     suspend fun delete(Barang: Barang)
 
-    @Query("UPDATE barang SET stok=-1 WHERE namaProduk=:namaproduk")
-    fun updateStok(namaproduk:String)
 
 }
 

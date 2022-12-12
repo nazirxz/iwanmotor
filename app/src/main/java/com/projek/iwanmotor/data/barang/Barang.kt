@@ -9,7 +9,7 @@ import java.util.*
 /**
  * Entity data class represents a single row in the database.
  */
-@Entity
+@Entity(tableName = "Barang")
 data class Barang(
     @PrimaryKey(autoGenerate = true)
     val id: Int = 0,

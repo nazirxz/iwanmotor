@@ -2,14 +2,17 @@ package com.projek.iwanmotor.ui.transaksi
 
 import android.app.DatePickerDialog
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.AdapterView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
+import android.widget.ArrayAdapter
 import com.projek.iwanmotor.data.barang.IwanMotorApplication
 import com.projek.iwanmotor.data.transaksi.Transaksi
 import com.projek.iwanmotor.databinding.FragmentTambahTransaksiBinding
@@ -17,11 +20,9 @@ import com.projek.iwanmotor.ui.barang.BarangViewModel
 import com.projek.iwanmotor.ui.barang.BarangViewModelFactory
 import com.projek.iwanmotor.ui.barang.TambahBarangDirections
 import com.projek.iwanmotor.utils.Utility.dateNow
-import java.nio.file.Files.size
 import java.text.DateFormatSymbols
 import java.text.SimpleDateFormat
 import java.util.*
-import kotlin.collections.ArrayList
 
 
 /**
@@ -30,9 +31,10 @@ import kotlin.collections.ArrayList
  * create an instance of this fragment.
  */
 class TambahTransaksi : Fragment() {
-    private var namaProduk = ""
+
     private var calendar = Calendar.getInstance()
-    private val binding2 get() = _binding as FragmentTambahTransaksiBinding
+    private var namaProduk = "Nama Produk"
+
 
     private val viewModel: TransaksiViewModel by activityViewModels {
        TransaksiViewModelFactory(
@@ -64,7 +66,7 @@ class TambahTransaksi : Fragment() {
      */
     private fun isEntryValid(): Boolean {
         return viewModel.isEntryValid(
-            binding.inputNamaProduk.text.toString(),
+            binding.namaProdukTxt.selectedItem.toString(),
 //            binding.namaProdukTxt.toString(),
             binding.inputHarga.text.toString(),
             binding.inputJumlah.text.toString(),
@@ -75,60 +77,23 @@ class TambahTransaksi : Fragment() {
     /**
      * Binds views with the passed in [barang] information.
      */
-//    fun getNamaProduk():ArrayList<Barang> {
-//        val list = arrayListOf<Barang>()
-//
-//        for (position in namaProduk.indices) {
-//            val name = Barang(
-//                0,
-//                viewModel2.allItems.toString(),
-//                0.toDouble(),
-//                0.toDouble(),
-//                0,
-//                ""
-//            )
-//            name.namaProduk = namaProduk[position].toString()
-//            list.add(name)
-//        }
-//        return list
-//    }
-//    private fun setSpinner(){
-//        val namaProduk2 = getNamaProduk()
-//
-//        val arrayAdapter =
-//            ArrayAdapter(requireActivity(), androidx.appcompat.R.layout.support_simple_spinner_dropdown_item, namaProduk2)
-//        binding.namaProdukTxt.apply {
-//            adapter = arrayAdapter
-//            onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-//                override fun onItemSelected(
-//                    parent: AdapterView<*>?,
-//                    view: View?,
-//                    position: Int,
-//                    id: Long,
-//                ) {
-//                    namaProduk = namaProduk2[position].toString()
-//                }
-//                override fun onNothingSelected(parent: AdapterView<*>?) {}
-//            }
-//        }
-//    }
 
     private fun bind(item: Transaksi) {
         val price = "%.2f".format(item.harga)
         val price2 = "%.2f".format(item.subtotal)
 
         binding.apply {
-             inputNamaProduk.setText(item.namaProduk, TextView.BufferType.SPANNABLE)
+            namaProdukTxt.onItemSelectedListener
             inputHarga.setText(price, TextView.BufferType.SPANNABLE)
             inputJumlah.setText(item.jumlah.toString(), TextView.BufferType.SPANNABLE)
             inputSubtotal.setText(price2, TextView.BufferType.SPANNABLE)
             inputTglPembelian.setText(item.tglPembelian)
             saveChangesBtn.setOnClickListener {
                 updateItem()
-                viewModel2.updateStok(namaProduk)
             }
         }
     }
+
     /**
      * Inserts the new Item into database and navigates up to list fragment.
      */
@@ -136,12 +101,13 @@ class TambahTransaksi : Fragment() {
         if (isEntryValid()) {
             viewModel.addNewTransaksi(
                 randomString(6),
-                binding.inputNamaProduk.text.toString(),
+                binding.namaProdukTxt.selectedItem.toString(),
                 binding.inputHarga.text.toString(),
                 binding.inputJumlah.text.toString(),
                 binding.inputSubtotal.text.toString(),
                 binding.inputTglPembelian.text.toString()
             )
+            viewModel2.updateStok(binding.namaProdukTxt.selectedItem.toString(),binding.inputJumlah.text.toString())
             val action = TambahTransaksiDirections.actionTambahTransaksiToNavigationTransaksi()
             findNavController().navigate(action)
         }
@@ -154,7 +120,7 @@ class TambahTransaksi : Fragment() {
             viewModel.insertTransaksi(
                 this.navigationArgs.itemId,
                 randomString(6),
-                binding.inputNamaProduk.text.toString(),
+                binding.namaProdukTxt.selectedItem.toString(),
 //                binding.namaProdukTxt.toString(),
                 binding.inputHarga.text.toString(),
                 binding.inputJumlah.text.toString(),
@@ -199,6 +165,7 @@ class TambahTransaksi : Fragment() {
                 addNewItem()
             }
         }
+        setSpinner()
         binding.tvDate.dateNow()
 //        var total = (binding.inputHarga.text.toString().toInt() * binding.inputJumlah.text.toString().toInt())
 //        binding.inputSubtotal.setText(total.toString())
@@ -207,6 +174,44 @@ class TambahTransaksi : Fragment() {
     private fun updateLabel() {
         val formatter = SimpleDateFormat("d MMMM y", Locale.US)
         binding.inputTglPembelian.setText(formatter.format(calendar.time))
+    }
+
+    private fun setSpinner() {
+
+        // Display the namaProduk values
+        viewModel2.getAllNamaProduk().observe(viewLifecycleOwner) {
+            Log.d("total nama produk", it.toString())
+            // Make sure that the it variable is a List<Barang>
+            val barangList = it
+
+            val namaProdukList = barangList.map { it.namaProduk }
+
+            // Use the ArrayList as the data for the ArrayAdapter
+            val arrayAdapter = ArrayAdapter(
+                requireContext(),
+                androidx.appcompat.R.layout.support_simple_spinner_dropdown_item,
+                namaProdukList
+            )
+            Log.d("total nama produk", namaProdukList.toString())
+
+            binding.namaProdukTxt.apply {
+                adapter = arrayAdapter
+                onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+                    override fun onItemSelected(
+                        parent: AdapterView<*>?,
+                        view: View?,
+                        position: Int,
+                        id: Long,
+                    ) {
+                        namaProduk = namaProdukList[position]
+                    }
+
+                    override fun onNothingSelected(parent: AdapterView<*>?) {}
+                }
+            }
+            binding.namaProdukTxt.adapter = arrayAdapter
+
+        }
     }
 
     private fun setUpDatePicker() {

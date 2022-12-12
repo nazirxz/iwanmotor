@@ -16,7 +16,6 @@ import com.projek.iwanmotor.R
 import com.projek.iwanmotor.data.barang.Barang
 import com.projek.iwanmotor.data.barang.IwanMotorApplication
 import com.projek.iwanmotor.data.transaksi.Transaksi
-import com.projek.iwanmotor.databinding.FragmentDetailBarangBinding
 import com.projek.iwanmotor.databinding.FragmentDetailTransaksiBinding
 import com.projek.iwanmotor.ui.barang.BarangViewModel
 import com.projek.iwanmotor.ui.barang.BarangViewModelFactory
@@ -127,6 +126,8 @@ class DetailTransaksi : Fragment() {
         }
         binding.tvDate.dateNow()
         setUpDatePicker()
+        binding.inputNamaProduk.isClickable = false
+        binding.inputNamaProduk.isFocusable = false
     }
     private fun updateLabel() {
         val formatter = SimpleDateFormat("d MMMM y", Locale.US)

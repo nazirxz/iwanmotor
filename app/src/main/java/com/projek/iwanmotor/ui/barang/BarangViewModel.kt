@@ -1,10 +1,10 @@
 package com.projek.iwanmotor.ui.barang
 
 
+import android.text.Editable
 import androidx.lifecycle.*
 import com.projek.iwanmotor.data.barang.Barang
 import com.projek.iwanmotor.data.barang.BarangDao
-import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.launch
 
 class BarangViewModel(private val barangDao : BarangDao) : ViewModel() {
@@ -61,11 +61,6 @@ class BarangViewModel(private val barangDao : BarangDao) : ViewModel() {
             updateItem(newItem)
         }
     }
-    fun updateStok(namaProduk: String) {
-        viewModelScope.launch {
-            barangDao.updateStok(namaProduk)
-        }
-    }
 
     /**
      * Inserts the new Item into database.
@@ -103,7 +98,12 @@ class BarangViewModel(private val barangDao : BarangDao) : ViewModel() {
 
     fun getTotalStok() = barangDao.getTotalStok().asLiveData()
     fun getTotalKasKeluar() = barangDao.getTotalKasKeluar().asLiveData()
-
+    fun getAllNamaProduk() = barangDao.getAllProduk()
+    fun updateStok(namaProduk:String, jmlhStok: String) {
+        viewModelScope.launch {
+            barangDao.updateStok(namaProduk,jmlhStok.toInt())
+        }
+    }
     /**
      * Returns true if the EditTexts are not empty
      */
