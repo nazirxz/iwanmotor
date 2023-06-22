@@ -8,16 +8,16 @@ import kotlinx.coroutines.flow.Flow
 @Dao
 interface BarangDao {
 
-    @Query("SELECT * from Barang WHERE stok>=1 ORDER BY namaProduk ASC")
+    @Query("SELECT * from Barang WHERE stok>=0 ORDER BY namaProduk ASC")
     fun getItems(): Flow<List<Barang>>
 
     @Query("SELECT * from Barang WHERE id = :id")
     fun getItem(id: Int): Flow<Barang>
 
-    @Query("SELECT * from Barang WHERE stok>=1 ORDER BY namaProduk ASC")
+    @Query("SELECT * from Barang WHERE stok>=0 ORDER BY namaProduk ASC")
     fun getAllProduk():LiveData<List<Barang>>
 
-    @Query("SELECT SUM(hargaModal) FROM barang ")
+    @Query("SELECT SUM(hargaModal) FROM barang where stok>=0")
     fun getTotalKasKeluar():Flow<Int>
 
     @Query("SELECT SUM(stok) From barang WHERE stok>=1")
