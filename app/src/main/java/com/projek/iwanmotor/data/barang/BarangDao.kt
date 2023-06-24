@@ -11,6 +11,7 @@ interface BarangDao {
     @Query("SELECT * from Barang WHERE stok>=0 ORDER BY namaProduk ASC")
     fun getItems(): Flow<List<Barang>>
 
+
     @Query("SELECT * from Barang WHERE id = :id")
     fun getItem(id: Int): Flow<Barang>
 

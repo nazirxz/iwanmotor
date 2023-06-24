@@ -137,7 +137,7 @@ class TambahBarang : Fragment() {
                 addNewItem()
             }
         }
-        binding.tvDate.dateNow()
+//        binding.tvDate.dateNow()
 
     }
 

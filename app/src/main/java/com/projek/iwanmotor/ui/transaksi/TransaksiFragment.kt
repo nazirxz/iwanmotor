@@ -61,7 +61,7 @@ class TransaksiFragment : Fragment() {
         binding.floatingActionButton.setOnClickListener {
             findNavController().navigate(R.id.action_navigation_transaksi_to_tambahTransaksi)
         }
-        binding.tvDate.dateNow()
+//        binding.tvDate.dateNow()
     }
 
     override fun onDestroyView() {

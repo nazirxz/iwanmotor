@@ -59,4 +59,7 @@ dependencies {
     // Navigation libraries
     implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
     implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
+
+    //pdf
+    implementation 'com.itextpdf:itextpdf:5.5.13'
 }
