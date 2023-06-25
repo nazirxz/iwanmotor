@@ -13,4 +13,8 @@
         android:id="@+id/navigation_barang"
         android:icon="@drawable/ic_barang"
         android:title="@string/title_barang" />
+    <item
+        android:id="@+id/navigation_kwitansi"
+        android:icon="@drawable/ic_kwitansi"
+        android:title="@string/Kwitansi"/>
 </menu>

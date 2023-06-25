@@ -75,28 +75,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="@dimen/margin"
-                tools:context=".ItemListFragment">
-
-<!--                <com.google.android.material.textfield.TextInputLayout-->
-<!--                    android:id="@+id/invoice"-->
-<!--                    style="@style/inputText"-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:clickable="false"-->
-<!--                    android:focusable="false"-->
-<!--                    android:hint="@string/invoice"-->
-<!--                    app:layout_constraintEnd_toEndOf="parent"-->
-<!--                    app:layout_constraintStart_toStartOf="parent"-->
-<!--                    app:layout_constraintTop_toTopOf="parent">-->
-
-<!--                    <com.google.android.material.textfield.TextInputEditText-->
-<!--                        android:id="@+id/input_invoice"-->
-<!--                        android:layout_width="match_parent"-->
-<!--                        android:layout_height="match_parent"-->
-<!--                        android:inputType="textAutoComplete|textCapWords"-->
-<!--                        android:singleLine="true" />-->
-<!--                </com.google.android.material.textfield.TextInputLayout>-->
+                android:layout_margin="@dimen/margin">
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/nama_produk_txt"
@@ -108,12 +87,13 @@
                     android:focusable="false"
                     android:hint="@string/namaproduk"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent">
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/input_nama_produk"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:inputType="textAutoComplete|textCapWords"
                         android:singleLine="true" />
                 </com.google.android.material.textfield.TextInputLayout>
@@ -127,13 +107,12 @@
                     android:hint="@string/harga"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/nama_produk_txt"
-                    app:prefixText="@string/currency_symbol">
+                    app:layout_constraintTop_toBottomOf="@id/nama_produk_txt">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/input_harga"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:inputType="numberDecimal"
                         android:singleLine="true" />
                 </com.google.android.material.textfield.TextInputLayout>
@@ -152,7 +131,7 @@
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/input_jumlah"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:inputType="number"
                         android:singleLine="true" />
                 </com.google.android.material.textfield.TextInputLayout>
@@ -166,13 +145,12 @@
                     android:hint="@string/subtotal"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/jumlah_txt"
-                    app:prefixText="@string/currency_symbol">
+                    app:layout_constraintTop_toBottomOf="@id/jumlah_txt">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/input_subtotal"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:inputType="numberDecimal"
                         android:singleLine="true" />
                 </com.google.android.material.textfield.TextInputLayout>
@@ -196,7 +174,9 @@
                         android:inputType="date"
                         android:maxLines="1" />
                 </com.google.android.material.textfield.TextInputLayout>
+
             </androidx.constraintlayout.widget.ConstraintLayout>
+
         </com.google.android.material.card.MaterialCardView>
         <Button
                 android:id="@+id/add_btn"

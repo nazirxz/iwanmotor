@@ -57,6 +57,9 @@
     <string name="tambahdata">Tambah</string>
     <string name="hapusdata">Hapus</string>
 
+    <!--    Activity Kwitansi -->
+    <string name="title_kwitansi">Tambah Kwitansi</string>
+
 
     <!-- Activity Barang -->
     <string name="title_transaksi"> <u>Data Transaksi</u> </string>
@@ -75,5 +78,17 @@
     <string name="no">Tidak</string>
     <string name="yes">Ya</string>
     <string name="title_detail_transaksi"><u>Detail Transaksi</u></string>
+    <string name="Penerima">Telah terima dari</string>
+    <string name="Alamat">Alamat</string>
+    <string name="no_hp">No. HP</string>
+    <string name="jumlah_uang">Uang Sejumlah</string>
+    <string name="keterangan">Untuk Pembayaran</string>
+    <string name="type_txt">Type</string>
+    <string name="no_rangka">No. Rangka</string>
+    <string name="no_mesin">No. Mesin</string>
+    <string name="no_pol">No. Pol</string>
+    <string name="warna_txt">Warna</string>
+    <string name="Kwitansi">Kwitansi</string>
+    <string name="data_kwitansi"><u>Data Kwitansi</u></string>
 
 </resources>

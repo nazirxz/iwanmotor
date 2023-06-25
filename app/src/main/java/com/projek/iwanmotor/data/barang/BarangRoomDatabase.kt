@@ -20,17 +20,20 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import com.projek.iwanmotor.data.kwitansi.Kwitansi
+import com.projek.iwanmotor.data.kwitansi.KwitansiDao
 import com.projek.iwanmotor.data.transaksi.Transaksi
 import com.projek.iwanmotor.data.transaksi.TransaksiDao
 
 /**
  * Database class with a singleton INSTANCE object.
  */
-@Database(entities = [Barang::class,Transaksi::class], version = 2, exportSchema = false)
+@Database(entities = [Barang::class,Transaksi::class,Kwitansi::class], version = 2, exportSchema = false)
 abstract class BarangRoomDatabase : RoomDatabase() {
 
     abstract fun barangDao(): BarangDao
     abstract fun transaksiDao(): TransaksiDao
+    abstract fun kwitansiDao(): KwitansiDao
 
     companion object {
         @Volatile

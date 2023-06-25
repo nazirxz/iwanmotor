@@ -9,6 +9,8 @@
         android:id="@+id/navigation_dashboard"
         android:name="com.projek.iwanmotor.ui.dashboard.DashboardFragment"
         tools:layout="@layout/fragment_dashboard" />
+
+<!--    Navigation barang-->
     <fragment
         android:id="@+id/navigation_barang"
         android:name="com.projek.iwanmotor.ui.barang.BarangFragment"
@@ -26,7 +28,7 @@
         android:id="@+id/tambahBarang"
         android:name="com.projek.iwanmotor.ui.barang.TambahBarang"
         android:label="TambahBarang"
-        tools:layout="@layout/fragment_tambah_barang">
+        tools:layout="@layout/fragment_tambah_kwitansi">
         <argument
             android:name="title"
             app:argType="string" />
@@ -52,6 +54,8 @@
             android:id="@+id/action_editBarang_to_navigation_barang"
             app:destination="@id/navigation_barang" />
     </fragment>
+
+<!--    Navigation Transaksi-->
     <fragment
         android:id="@+id/navigation_transaksi"
         android:name="com.projek.iwanmotor.ui.transaksi.TransaksiFragment"
@@ -91,5 +95,47 @@
         <action
             android:id="@+id/action_detailTransaksi_to_navigation_transaksi"
             app:destination="@id/navigation_transaksi" />
+    </fragment>
+
+<!--    Navigation kwitansi-->
+    <fragment
+        android:id="@+id/navigation_kwitansi"
+        android:name="com.projek.iwanmotor.ui.kwitansi.KwitansiFragment"
+        android:label="fragment_kwitansi"
+        tools:layout="@layout/fragment_kwitansi" >
+        <action
+            android:id="@+id/action_navigation_kwitansi_to_tambahKwitansi"
+            app:destination="@id/tambahKwitansi" />
+        <action
+            android:id="@+id/action_navigation_kwitansi_to_detailKwitansi"
+            app:destination="@id/detailKwitansi" />
+    </fragment>
+    <fragment
+        android:id="@+id/tambahKwitansi"
+        android:name="com.projek.iwanmotor.ui.kwitansi.TambahKwitansi"
+        android:label="TambahKwitansi"
+        tools:layout="@layout/fragment_tambah_kwitansi">
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <argument
+            android:name="item_id"
+            android:defaultValue="-1"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_tambahKwitansi_to_navigation_Kwitansi"
+            app:destination="@id/navigation_kwitansi" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailKwitansi"
+        android:name="com.projek.iwanmotor.ui.kwitansi.DetailKwitansi"
+        android:label="DetailKwitansi"
+        tools:layout="@layout/fragment_detail_kwitansi">
+        <argument
+            android:name="item_id"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_detailKwitansi_to_navigation_kwitansi"
+            app:destination="@id/navigation_kwitansi" />
     </fragment>
 </navigation>
