@@ -167,24 +167,6 @@
 
     </com.google.android.material.card.MaterialCardView>
 
-<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
-<!--        android:id="@+id/floatingActionButton"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginBottom="84dp"-->
-<!--        android:contentDescription="@string/tambahbarangbaru"-->
-<!--        android:src="@android:drawable/ic_input_add"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintHorizontal_bias="0.954"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/header"-->
-<!--        app:layout_constraintVertical_bias="1.0"-->
-<!--        app:tint="@android:color/white" />-->
-
-    <!-- Floating action button for add alarm -->
-    <!-- Make sure that you are constraining this
-         button to the parent button -->
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/add_fab"
@@ -209,9 +191,6 @@
         app:layout_constraintStart_toStartOf="@+id/add_fab"
         app:srcCompat="@drawable/ic_barang" />
 
-    <!-- Action name text for the add alarm button -->
-    <!-- Make sure that you are constraining this Text to
-         the add Alarm FAB button -->
     <TextView
         android:id="@+id/add_tambahbarang"
         android:layout_width="wrap_content"
@@ -222,9 +201,6 @@
         app:layout_constraintEnd_toStartOf="@+id/add_barang"
         app:layout_constraintTop_toTopOf="@+id/add_barang" />
 
-    <!-- Floating action button for add person -->
-    <!-- Make sure that you are constraining this
-         button to the add Alarm FAB button -->
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/add_exportpdf"
         android:layout_width="wrap_content"
@@ -236,9 +212,6 @@
         app:layout_constraintStart_toStartOf="@+id/add_barang"
         app:srcCompat="@drawable/ic_pdf" />
 
-    <!-- Action name text for the add person button -->
-    <!-- Make sure that you are constraining this Text
-         to the add Person FAB button -->
     <TextView
         android:id="@+id/exportpdf"
         android:layout_width="wrap_content"

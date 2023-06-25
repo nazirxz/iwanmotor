@@ -29,6 +29,8 @@ import com.projek.iwanmotor.data.barang.IwanMotorApplication
 import com.projek.iwanmotor.databinding.FragmentBarangBinding
 import java.io.File
 import java.io.FileOutputStream
+import java.text.NumberFormat
+import java.util.*
 
 
 class BarangFragment : Fragment() {
@@ -146,14 +148,17 @@ class BarangFragment : Fragment() {
 
             // Retrieve data from getAllNamaProduk LiveData
             viewModel.getAllNamaProduk().observe(viewLifecycleOwner) { items ->
+
                 items?.let {
                     for (barang in it) {
+                        fun getFormattedPrice(): String = NumberFormat.getCurrencyInstance(Locale("id","ID")).format(barang.hargaModal)
+                        fun getFormattedPrice2(): String = NumberFormat.getCurrencyInstance(Locale("id","ID")).format(barang.hargaJual)
                         // Add Barang data to the table
                         table.addCell(barang.id.toString())
                         table.addCell(barang.namaProduk)
                         table.addCell(barang.stok.toString())
-                        table.addCell(barang.hargaModal.toString())
-                        table.addCell(barang.hargaJual.toString())
+                        table.addCell(getFormattedPrice())
+                        table.addCell(getFormattedPrice2())
                         table.addCell(barang.tglMasuk)
                     }
                 }
