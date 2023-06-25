@@ -230,7 +230,7 @@ class DetailKwitansi : Fragment() {
             bind(kwitansi)
         }
         setUpDatePicker()
-//        binding.tvDate.dateNow()
+        binding.tvDate.dateNow()
 
     }
     private fun updateLabel() {

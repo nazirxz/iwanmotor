@@ -120,7 +120,7 @@ class EditBarang : Fragment() {
            barang = selectedItem
             bind(barang)
         }
-//        binding.tvDate.dateNow()
+        binding.tvDate.dateNow()
         setUpDatePicker()
     }
 
