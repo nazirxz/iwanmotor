@@ -25,7 +25,7 @@ data class Kwitansi(
     @ColumnInfo(name = "noMesin")
     val noMesin: Int,
     @ColumnInfo(name = "noPol")
-    val noPol: Int,
+    val noPol: String,
     @ColumnInfo(name = "tahun")
     val tahun: Int,
     @ColumnInfo(name = "warna")

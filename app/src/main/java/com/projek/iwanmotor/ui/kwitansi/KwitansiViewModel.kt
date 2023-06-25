@@ -24,7 +24,7 @@ class KwitansiViewModel(private val kwitansiDao: KwitansiDao): ViewModel(){
         type: String,
         noRangka: Int,
         noMesin: Int,
-        noPol: Int,
+        noPol: String,
         tahun: Int,
         warna: String,
         tanggal: String
@@ -151,7 +151,7 @@ class KwitansiViewModel(private val kwitansiDao: KwitansiDao): ViewModel(){
             type = type,
             noRangka = noRangka.toInt(),
             noMesin = noMesin.toInt(),
-            noPol= noPol.toInt(),
+            noPol= noPol,
             tahun = tahun.toInt(),
             warna = warna,
             tanggal = tanggal
@@ -172,7 +172,7 @@ class KwitansiViewModel(private val kwitansiDao: KwitansiDao): ViewModel(){
         type: String,
         noRangka: Int,
         noMesin: Int,
-        noPol: Int,
+        noPol: String,
         tahun: Int,
         warna: String,
         tanggal: String
@@ -218,7 +218,7 @@ class KwitansiViewModel(private val kwitansiDao: KwitansiDao): ViewModel(){
             type = type,
             noRangka = noRangka.toInt(),
             noMesin = noMesin.toInt(),
-            noPol= noPol.toInt(),
+            noPol= noPol,
             tahun = tahun.toInt(),
             warna = warna,
             tanggal = tanggal

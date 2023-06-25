@@ -125,7 +125,7 @@ class TambahKwitansi : Fragment() {
                 binding.inputType.text.toString(),
                 binding.inputNorangka.text.toString().toInt(),
                 binding.inputNomesin.text.toString().toInt(),
-                binding.inputNopol.text.toString().toInt(),
+                binding.inputNopol.text.toString(),
                 binding.inputTahun.text.toString().toInt(),
                 binding.inputWarna.text.toString(),
                 binding.inputTglPembelian.text.toString(),
