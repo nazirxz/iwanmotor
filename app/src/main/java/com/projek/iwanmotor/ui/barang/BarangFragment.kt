@@ -27,6 +27,7 @@ import com.projek.iwanmotor.R
 import com.projek.iwanmotor.data.barang.Barang
 import com.projek.iwanmotor.data.barang.IwanMotorApplication
 import com.projek.iwanmotor.databinding.FragmentBarangBinding
+import com.projek.iwanmotor.utils.Utility.dateNow
 import java.io.File
 import java.io.FileOutputStream
 import java.text.NumberFormat

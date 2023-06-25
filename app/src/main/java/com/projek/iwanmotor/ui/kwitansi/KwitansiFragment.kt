@@ -28,6 +28,7 @@ import com.projek.iwanmotor.R
 import com.projek.iwanmotor.data.barang.IwanMotorApplication
 import com.projek.iwanmotor.data.kwitansi.Kwitansi
 import com.projek.iwanmotor.databinding.FragmentKwitansiBinding
+import com.projek.iwanmotor.utils.Utility.dateNow
 import java.io.File
 import java.io.FileOutputStream
 import java.text.NumberFormat

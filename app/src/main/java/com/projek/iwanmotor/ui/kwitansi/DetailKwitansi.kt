@@ -26,6 +26,7 @@ import com.projek.iwanmotor.R
 import com.projek.iwanmotor.data.barang.IwanMotorApplication
 import com.projek.iwanmotor.data.kwitansi.Kwitansi
 import com.projek.iwanmotor.databinding.FragmentDetailKwitansiBinding
+import com.projek.iwanmotor.utils.Utility.dateNow
 
 import java.io.File
 import java.io.FileOutputStream
@@ -229,6 +230,7 @@ class DetailKwitansi : Fragment() {
             bind(kwitansi)
         }
         setUpDatePicker()
+//        binding.tvDate.dateNow()
 
     }
     private fun updateLabel() {

@@ -9,8 +9,9 @@
 
     <TextView
         android:id="@+id/item_invoice"
-        android:layout_width="60dp"
+        android:layout_width="80dp"
         android:layout_height="wrap_content"
+        android:textAlignment="center"
         android:text="@string/invoice"
         android:textSize="10sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -19,9 +20,9 @@
 
     <TextView
         android:id="@+id/item_jumlah"
-        android:layout_width="60dp"
+        android:layout_width="40dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
+        android:layout_marginStart="5dp"
         android:text="@string/jumlah"
         android:textAlignment="center"
         android:textSize="10sp"
@@ -33,10 +34,11 @@
 
     <TextView
         android:id="@+id/item_subtotal"
-        android:layout_width="60dp"
+        android:layout_width="80dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
         android:text="@string/subtotal"
-        android:layout_marginStart="25dp"
+        android:textAlignment="center"
         android:textSize="10sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/item_tglBeli"
@@ -47,10 +49,9 @@
 
     <TextView
         android:id="@+id/item_tglBeli"
-        android:layout_width="107dp"
-        android:layout_height="14dp"
-        android:layout_marginEnd="52dp"
-        android:layout_marginStart="15dp"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
         android:text="@string/tglpembelian"
         android:textAlignment="center"
         android:textSize="10sp"

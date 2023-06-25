@@ -14,6 +14,7 @@ import com.projek.iwanmotor.data.barang.IwanMotorApplication
 import com.projek.iwanmotor.data.kwitansi.Kwitansi
 import com.projek.iwanmotor.databinding.FragmentTambahKwitansiBinding
 import com.projek.iwanmotor.ui.barang.TambahBarangDirections
+import com.projek.iwanmotor.utils.Utility.dateNow
 import java.text.DateFormatSymbols
 import java.text.SimpleDateFormat
 import java.util.*
