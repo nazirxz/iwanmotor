@@ -14,13 +14,7 @@
   <component name="ChangeListManager">
     <list default="true" id="fb5c3a67-a689-432a-9c14-de613206bd96" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.gradle/7.3.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.3.3/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/projek/iwanmotor/data/kwitansi/Kwitansi.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/projek/iwanmotor/data/kwitansi/Kwitansi.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/projek/iwanmotor/ui/kwitansi/KwitansiViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/projek/iwanmotor/ui/kwitansi/KwitansiViewModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/projek/iwanmotor/ui/kwitansi/TambahKwitansi.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/projek/iwanmotor/ui/kwitansi/TambahKwitansi.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_detail_kwitansi.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_detail_kwitansi.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_tambah_kwitansi.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_tambah_kwitansi.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -364,7 +358,14 @@
       <option name="project" value="LOCAL" />
       <updated>1687698061399</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="change nopol int to string">
+      <created>1687706673564</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1687706673564</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -403,6 +404,7 @@
     <MESSAGE value="menambahkan export pdf dan floating button pada barang" />
     <MESSAGE value="menambahkan export pdf dan floating button pada transaksi dan sedikit perbaikan di logic barang" />
     <MESSAGE value="all done" />
-    <option name="LAST_COMMIT_MESSAGE" value="all done" />
+    <MESSAGE value="change nopol int to string" />
+    <option name="LAST_COMMIT_MESSAGE" value="change nopol int to string" />
   </component>
 </project>
