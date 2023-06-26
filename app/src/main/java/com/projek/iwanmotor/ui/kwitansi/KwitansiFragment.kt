@@ -109,7 +109,7 @@ class KwitansiFragment: Fragment() {
                 exportPdfText.visibility = View.GONE
             }
         }
-        binding.tvDate.dateNow()
+//        binding.tvDate.dateNow()
     }
     private fun exportToPdf() {
         val filePath = requireContext().getExternalFilesDir(null)?.absolutePath
@@ -155,9 +155,7 @@ class KwitansiFragment: Fragment() {
             viewModel.allKwitansi.observe(viewLifecycleOwner) { items ->
                 items?.let {
                     for (kwitansi in it) {
-                        fun getFormattedPrice(): String =
-                            NumberFormat.getCurrencyInstance(Locale("id", "ID")).format(kwitansi.uangSejumlah)
-
+                        fun getFormattedPrice(): String = NumberFormat.getCurrencyInstance(Locale("id","ID")).format(kwitansi.uangSejumlah)
                         // Add kwitansi data to the table
                         table.addCell(kwitansi.id.toString())
                         table.addCell(kwitansi.diterima)

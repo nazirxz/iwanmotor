@@ -125,7 +125,7 @@ class DetailTransaksi : Fragment() {
             transaksi = selectedItem
             bind(transaksi)
         }
-        binding.tvDate.dateNow()
+//        binding.tvDate.dateNow()
         setUpDatePicker()
 //        binding.inputInvoice.isClickable = false
 //        binding.inputInvoice.isFocusable = false

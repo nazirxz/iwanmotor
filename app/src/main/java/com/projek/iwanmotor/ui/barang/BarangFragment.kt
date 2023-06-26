@@ -61,7 +61,7 @@ class BarangFragment : Fragment() {
                 BarangFragmentDirections.actionNavigationBarangToEditBarang(it.id)
             this.findNavController().navigate(action)
         }
-        binding.tvDate.dateNow()
+//        binding.tvDate.dateNow()
         binding.recyclerView.layoutManager = LinearLayoutManager(this.context)
         binding.recyclerView.adapter = adapter
         // Attach an observer on the allItems list to update the UI automatically when the data

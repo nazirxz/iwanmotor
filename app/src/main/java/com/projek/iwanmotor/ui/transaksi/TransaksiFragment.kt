@@ -110,7 +110,7 @@ class TransaksiFragment : Fragment() {
                 exportPdfText.visibility = View.GONE
             }
         }
-        binding.tvDate.dateNow()
+//        binding.tvDate.dateNow()
     }
     private fun exportToPdf() {
         val filePath = requireContext().getExternalFilesDir(null)?.absolutePath
@@ -149,13 +149,14 @@ class TransaksiFragment : Fragment() {
                 items?.let {
                     for (transaksi in it) {
                         fun getFormattedPrice(): String = NumberFormat.getCurrencyInstance(Locale("id","ID")).format(transaksi.harga)
+                        fun getFormattedPrice2(): String = NumberFormat.getCurrencyInstance(Locale("id","ID")).format(transaksi.subtotal)
                         // Add transaksi data to the table
                         table.addCell(transaksi.id.toString())
                         table.addCell(transaksi.invoice)
                         table.addCell(transaksi.namaProduk)
                         table.addCell(getFormattedPrice())
                         table.addCell(transaksi.jumlah.toString())
-                        table.addCell(transaksi.subtotal.toString())
+                        table.addCell(getFormattedPrice2())
                         table.addCell(transaksi.tglPembelian)
                     }
                 }
