@@ -18,16 +18,20 @@
       <change beforePath="$PROJECT_DIR$/.gradle/7.3.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.3.3/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/projek/iwanmotor/data/kwitansi/Kwitansi.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/projek/iwanmotor/data/kwitansi/Kwitansi.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/projek/iwanmotor/ui/barang/BarangFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/projek/iwanmotor/ui/barang/BarangFragment.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/projek/iwanmotor/ui/barang/EditBarang.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/projek/iwanmotor/ui/barang/EditBarang.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/projek/iwanmotor/ui/barang/TambahBarang.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/projek/iwanmotor/ui/barang/TambahBarang.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/projek/iwanmotor/ui/dashboard/DashboardFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/projek/iwanmotor/ui/dashboard/DashboardFragment.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/projek/iwanmotor/ui/kwitansi/DetailKwitansi.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/projek/iwanmotor/ui/kwitansi/DetailKwitansi.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/projek/iwanmotor/ui/kwitansi/KwitansiFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/projek/iwanmotor/ui/kwitansi/KwitansiFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/projek/iwanmotor/ui/kwitansi/KwitansiListAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/projek/iwanmotor/ui/kwitansi/KwitansiListAdapter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/projek/iwanmotor/ui/kwitansi/KwitansiViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/projek/iwanmotor/ui/kwitansi/KwitansiViewModel.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/projek/iwanmotor/ui/kwitansi/TambahKwitansi.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/projek/iwanmotor/ui/kwitansi/TambahKwitansi.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/projek/iwanmotor/ui/transaksi/DetailTransaksi.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/projek/iwanmotor/ui/transaksi/DetailTransaksi.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/projek/iwanmotor/ui/transaksi/TambahTransaksi.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/projek/iwanmotor/ui/transaksi/TambahTransaksi.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/projek/iwanmotor/ui/transaksi/TransaksiFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/projek/iwanmotor/ui/transaksi/TransaksiFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_detail_kwitansi.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_detail_kwitansi.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_tambah_kwitansi.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_tambah_kwitansi.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -386,7 +390,21 @@
       <option name="project" value="LOCAL" />
       <updated>1687707024799</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="fix error">
+      <created>1687743590384</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1687743590384</updated>
+    </task>
+    <task id="LOCAL-00030" summary="fix error v2">
+      <created>1687743638312</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1687743638312</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -402,7 +420,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="first initial commit" />
     <MESSAGE value="front-end - Splash screen" />
     <MESSAGE value="add different color in colors.xml" />
     <MESSAGE value="add font, changes theme.xml and color" />
@@ -426,6 +443,8 @@
     <MESSAGE value="menambahkan export pdf dan floating button pada transaksi dan sedikit perbaikan di logic barang" />
     <MESSAGE value="all done" />
     <MESSAGE value="change nopol int to string" />
-    <option name="LAST_COMMIT_MESSAGE" value="change nopol int to string" />
+    <MESSAGE value="fix error" />
+    <MESSAGE value="fix error v2" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix error v2" />
   </component>
 </project>

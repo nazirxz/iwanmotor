@@ -13,7 +13,6 @@ import androidx.navigation.fragment.navArgs
 import com.projek.iwanmotor.data.barang.IwanMotorApplication
 import com.projek.iwanmotor.data.kwitansi.Kwitansi
 import com.projek.iwanmotor.databinding.FragmentTambahKwitansiBinding
-import com.projek.iwanmotor.ui.barang.TambahBarangDirections
 import com.projek.iwanmotor.utils.Utility.dateNow
 import java.text.DateFormatSymbols
 import java.text.SimpleDateFormat
@@ -71,7 +70,7 @@ class TambahKwitansi : Fragment() {
         binding.apply {
             inputNamaPenerima.setText(item.diterima)
             inputAlamat.setText(item.alamat)
-            inputNohp.setText(item.nohp)
+            inputNohp.setText(item.nohp.toInt())
             inputJumlah.setText(price, TextView.BufferType.SPANNABLE)
             inputPembayaran.setText(item.untukPembayaran)
             inputType.setText(item.type)
@@ -119,18 +118,18 @@ class TambahKwitansi : Fragment() {
                 this.navigationArgs.itemId,
                 binding.inputNamaPenerima.text.toString(),
                 binding.inputAlamat.text.toString(),
-                binding.inputNohp.text.toString().toInt(),
+                binding.inputNohp.text.toString(),
                 binding.inputJumlah.text.toString().toDouble(),
                 binding.inputPembayaran.text.toString(),
                 binding.inputType.text.toString(),
-                binding.inputNorangka.text.toString().toInt(),
-                binding.inputNomesin.text.toString().toInt(),
+                binding.inputNorangka.text.toString(),
+                binding.inputNomesin.text.toString(),
                 binding.inputNopol.text.toString(),
                 binding.inputTahun.text.toString().toInt(),
                 binding.inputWarna.text.toString(),
                 binding.inputTglPembelian.text.toString(),
             )
-            val action = TambahBarangDirections.actionTambahBarangToNavigationBarang()
+            val action = TambahKwitansiDirections.actionTambahKwitansiToNavigationKwitansi()
             findNavController().navigate(action)
         }
     }

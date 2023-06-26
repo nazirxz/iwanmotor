@@ -41,7 +41,7 @@ class KwitansiListAdapter (private val onItemClicked: (Kwitansi) -> Unit) :
             binding.itemUangSejumlah.text = getFormattedPrice2()
             binding.itemNoRangka.text = item.noRangka.toString()
             binding.itemNoMesin.text = item.noMesin.toString()
-            binding.itemNoPol.text = item.noPol.toString()
+            binding.itemNoPol.text = item.noPol
             binding.itemTahun.text= item.tahun.toString()
         }
     }

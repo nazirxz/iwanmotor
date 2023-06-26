@@ -207,7 +207,6 @@
                         android:id="@+id/input_norangka"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:inputType="number"
                         android:singleLine="true"/>
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -224,7 +223,6 @@
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/input_nomesin"
                         android:layout_width="match_parent"
-                        android:inputType="number"
                         android:singleLine="true"
                         android:layout_height="wrap_content"/>
                 </com.google.android.material.textfield.TextInputLayout>

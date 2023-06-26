@@ -3,6 +3,7 @@ package com.projek.iwanmotor.data.kwitansi
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import java.math.BigInteger
 
 @Entity
 data class Kwitansi(
@@ -13,7 +14,7 @@ data class Kwitansi(
     @ColumnInfo(name = "alamat")
     val alamat: String,
     @ColumnInfo(name = "nohp")
-    val nohp: Int,
+    val nohp: String,
     @ColumnInfo(name = "uangSejumlah")
     val uangSejumlah: Double,
     @ColumnInfo(name = "untukPembayaran")
@@ -21,9 +22,9 @@ data class Kwitansi(
     @ColumnInfo(name = "type")
     val type: String,
     @ColumnInfo(name = "noRangka")
-    val noRangka: Int,
+    val noRangka: String,
     @ColumnInfo(name = "noMesin")
-    val noMesin: Int,
+    val noMesin: String,
     @ColumnInfo(name = "noPol")
     val noPol: String,
     @ColumnInfo(name = "tahun")
