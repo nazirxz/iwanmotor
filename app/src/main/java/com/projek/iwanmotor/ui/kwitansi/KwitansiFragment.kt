@@ -109,7 +109,7 @@ class KwitansiFragment: Fragment() {
                 exportPdfText.visibility = View.GONE
             }
         }
-//        binding.tvDate.dateNow()
+        binding.tvDate.dateNow()
     }
     private fun exportToPdf() {
         val filePath = requireContext().getExternalFilesDir(null)?.absolutePath

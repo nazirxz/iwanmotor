@@ -98,7 +98,7 @@ class DashboardFragment : Fragment() {
                 }
             }
         }
-//        binding.tvDate.dateNow()
+        binding.tvDate.dateNow()
     }
     override fun onDestroyView() {
         super.onDestroyView()

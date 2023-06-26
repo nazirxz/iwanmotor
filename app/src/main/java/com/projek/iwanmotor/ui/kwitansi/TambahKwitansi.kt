@@ -155,7 +155,7 @@ class TambahKwitansi : Fragment() {
                 addNewItem()
             }
         }
-//        binding.tvDate.dateNow()
+        binding.tvDate.dateNow()
 //        var total = (binding.inputHarga.text.toString().toInt() * binding.inputJumlah.text.toString().toInt())
 //        binding.inputSubtotal.setText(total.toString())
 
